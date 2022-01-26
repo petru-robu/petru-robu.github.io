@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<script src="p5.js"></script>
+<script src="game.js"></script>
+</head>
+
+
+<div class="wrap-top">
+
+  <div class="top-bar">
+    <h2>Game of Life</h2>
+  </div>
+
+  <div class="info">
+    <p3>Faceti click pe pattern-uri pentru a le incarca. Mai mult despre game of life - </p3> <a href="https://conwaylife.com/wiki/Main_Page">LifeWiki</a><div class="lb"></div>
+    <p3>In general despre game of life - </p3> <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia-Game Of Life</a><p3>&nbsp- Si cum depind starile celulelor unele de altele</p3><div class="lb"></div>
+  </div>
+
+  <div class="info" style="float:right;">
+    <p3 style="opacity: 1; text-decoration: bold;">Robu Petru</p3>
+  </div>
+
+</div>
+
+
+
+<div class="wrapper-main">
+  <div id="engine"></div>
+  <div class="space"></div><div class="space"></div>
+
+  <div class="pattern-col">
+    <img src="cap.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p1()"><div class="space"></div><br></br>
+    <img src="anvil.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p2()"><div class="space"></div><br></br>
+    <img src="average.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p3()"><div class="space"></div><br></br>
+    <img src="beacon.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p4()"><div class="space"></div><br></br>
+    <img src="bipolebridgepseudobarberpole.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p5()"><div class="space"></div><br></br>
+    <img src="koksgalaxy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p6()"><div class="space"></div><br></br>
+    <img src="roteightor.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p24()"><div class="space"></div><br></br>
+    <img src="byflops.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p8()"> <div class="space" onclick="p8()"></div><br></br>
+    <img src="butterfly.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p9()" ><div class="space" onclick="p9()"></div><br></br>
+    <img src="cuphook.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p10()"><div class="space" onclick="p10()"></div><br></br>
+    <img src="cross2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p11()" ><div class="space" onclick="p11()"></div><br></br>
+   </div>
+
+
+  <div class="pattern-col">
+    <img src="weekender.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p12()"><div class="space"></div><br></br>
+    <img src="toadflipper.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p13()"><div class="space"></div><br></br>
+    <img src="shipinabottle.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p14()"><div class="space"></div><br></br>
+    <img src="starwithblocks.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p15()"><div class="space"></div><br></br>
+    <img src="tumbler.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p16()"><div class="space"></div><br></br>
+    <img src="orion2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p17()"><div class="space""></div><br></br>
+    <img src="spider.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p18()"> <div class="space" onclick="p8()"></div><br></br>
+    <img src="twopulsarquadrants.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p19()" ><div class="space" onclick="p9()"></div><br></br>
+    <img src="lwsstagalong.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p20()"><div class="space" onclick="p10()"></div><br></br>
+    <img src="nonmonotonicspaceship1.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p21()"><div class="space" onclick="p10()"></div><br></br>
+    <img src="negentropy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p22()"><div class="space" onclick="p10()"></div><br></br>
+  </div>
+
+
+
+</div>
+
+
+<div class="butoane">
+  <button class="button" onclick="startGame()">Start</button>
+  <button class="button" onclick="stopGame()">Stop</button>
+  <button class="button" onclick="clr_grid()">Clear</button>
+  <button class="button" onclick="random_set()">Rand</button>
+</div>
+<br></br>
+<br></br>
+
+
+
+
+
+
+
+</html>

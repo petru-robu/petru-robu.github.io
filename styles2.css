@@ -1,0 +1,111 @@
+html{
+  background-color: black;
+}
+
+.top-bar{
+  font-family: sans-serif;
+  color: white;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+#engine{
+  margin-top:1rem;
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+h2{
+  font-size: 6rem;
+  color: white;
+}
+
+.sub{
+  font-size: 0.78rem;
+  opacity: 0.4;
+}
+
+.butoane{
+  margin-left: 6rem;
+  display: inline-block;
+}
+
+.button{
+  background-color: #161616;
+  font-family: sans-serif;
+  color: white;
+  border: 2px solid black;
+  height:80px;
+  width:150px;
+  font-size: 2.6rem;
+}
+
+.button:hover {
+  background-color: #161616;
+  cursor: pointer;
+}
+
+.button:active {
+  color: gray;
+}
+
+
+.pattern-col{
+  margin-top: 4rem;
+  margin-left: 3.6rem;
+  vertical-align:top;
+  display: inline-block;
+}
+
+p1{
+  font-family: sans-serif;
+  font-size: 0.6rem;
+  color: white;
+}
+
+
+.space{
+  display: inline-block;
+  margin-left:2.7rem;
+}
+
+img{
+  filter: grayscale();
+}
+
+img:hover{
+  cursor: pointer;
+  filter: brightness(1500%);
+}
+
+.info{
+  font-family: sans-serif;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top:2.2rem;
+
+  display: inline-block;
+}
+a{
+  font-size: 0.8rem;
+  opacity: 0.6;
+  color: white;
+}
+a:hover{
+  cursor: pointer;
+  color:white;
+  opacity: 0.9;
+}
+
+
+p3{
+  font-family: sans-serif;
+  color:white;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.wrapper-main{
+  margin-top:5rem;
+  margin-left: 3.6rem;
+}
