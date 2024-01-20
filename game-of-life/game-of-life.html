@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Game of Life</title>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<script src="./js/p5.js"></script>
+<script src="./js/game.js"></script>
+</head>
+
+
+<div class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="game-of-life.html">Game of life</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+</div>   
+
+<body>
+
+    <h1>Game of Life</h1>
+        
+    <p>
+       Jocul Vieții este un automat celular conceput de matematicianul britanic John Horton Conway în 1970.<br>
+       Este un joc fără jucători, în sensul că evoluția sa este determinată de starea sa inițială, nefiind nevoie de nicio intervenție suplimentară. <br>
+       Interacțiunea cu Jocul Vieții constă în crearea unei configurații inițiale si a observa cum aceasta evolueaza. <br>
+    </p>
+
+    <p>
+        Universul Jocului Vieții este o matrice infinita, bidimensională, cu celule pătrate,<br> 
+        fiecare dintre acestea fiind în una dintre cele două stări posibile, vie sau moartă. <br>
+        Stabilirea starilor celulelor se face conform urmatoarelor reguli: <br>
+        <li>Orice celulă vie cu mai puțin de doi vecini vii moare, datorită subpopulării.</li>
+        <li>Orice celulă vie cu doi sau trei vecini vii trăiește în generația următoare.</li>
+        <li>Orice celulă vie cu mai mult de trei vecini vii moare, datorită suprapopulării.</li>
+        <li>Orice celulă moartă cu exact trei vecini vii devine o celulă vie, datorită reproducerii.</li>  
+    </p>
+
+
+    <p>
+       Pentru a incarca un model, apasa pe unul din butoanele acestea:
+    </p>
+
+    <div class="pattern-col">
+        <img src="./gol-img/cap.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p1()"><div class="space"></div>
+        <img src="./gol-img/anvil.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p2()"><div class="space"></div>
+        <img src="./gol-img/average.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p3()"><div class="space"></div>
+        <img src="./gol-img/beacon.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p4()"><div class="space"></div>
+        <img src="./gol-img/bipolebridgepseudobarberpole.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p5()"><div class="space"></div>
+        <img src="./gol-img/koksgalaxy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p6()"><div class="space"></div>
+        <img src="./gol-img/roteightor.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p24()"><div class="space"></div>
+        <img src="./gol-img/byflops.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p8()"> <div class="space" onclick="p8()"></div>
+        <img src="./gol-img/butterfly.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p9()" ><div class="space" onclick="p9()"></div>
+        <img src="./gol-img/cuphook.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p10()"><div class="space" onclick="p10()"></div>
+        <img src="./gol-img/cross2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p11()" ><div class="space" onclick="p11()"></div>
+        </div>
+        <br>
+        
+    <div class="pattern-col">
+        <img src="./gol-img/weekender.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p12()"><div class="space"></div>
+        <img src="./gol-img/toadflipper.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p13()"><div class="space"></div>
+        <img src="./gol-img/shipinabottle.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p14()"><div class="space"></div>
+        <img src="./gol-img/starwithblocks.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p15()"><div class="space"></div>
+        <img src="./gol-img/tumbler.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p16()"><div class="space"></div>
+        <img src="./gol-img/orion2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p17()"><div class="space""></div>
+        <img src="./gol-img/spider.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p18()"> <div class="space" onclick="p8()"></div>
+        <img src="./gol-img/twopulsarquadrants.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p19()" ><div class="space" onclick="p9()"></div>
+        <img src="./gol-img/lwsstagalong.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p20()"><div class="space" onclick="p10()"></div>
+        <img src="./gol-img/nonmonotonicspaceship1.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p21()"><div class="space" onclick="p10()"></div>
+        <img src="./gol-img/negentropy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p22()"><div class="space" onclick="p10()"></div>
+    </div> 
+    <br>
+    <div id="engine"></div>
+    <div class="space"></div><div class="space"></div>
+    <br>
+
+    <p>
+        Din aceste butoane controleaza programul: 
+    </p>
+    <div class="butoane">
+        <button class="button" onclick="startGame()">Start</button>
+        <button class="button" onclick="stopGame()">Stop</button>
+        <button class="button" onclick="clr_grid()">Clear</button>
+        <button class="button" onclick="random_set()">Rand</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+/* NAV BAR */
+.topnav 
+{
+    background-color: #000000;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+.topnav a 
+{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em 1.12em;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+  
+.topnav a:hover 
+{
+    text-decoration-line: underline;
+}
+  
+
+.topnav a.active 
+{
+    background-color: #0099b4;
+    color: white;
+}
+
+body
+{
+    background-color: rgb(255, 255, 255);
+    padding: 1.25em;
+}
+
+h1
+{
+    color: black;
+    text-align: left;
+    font-family: monospace;
+    font-size: 2.5em;
+}
+
+p
+{
+    
+    color: black;
+    font-family: monospace;
+    font-size: 1.25em;
+}
+
+img
+{
+    padding: 5px;
+    max-width: 100%;
+    min-width: auto;
+    height: auto;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.q
+{
+    font-style: italic;
+}
+
+#engine{
+  margin-top:0.5rem;
+  display: inline-block;
+}
+
+.butoane
+{
+display: inline-block;
+}
+
+.button{
+  background-color: #ffffff;
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.button:hover {
+  background-color: #c4c4c4;
+  cursor: pointer;
+}
+
+.button:active {
+  color: gray;
+}
+
+.pattern-col{
+  margin-bottom: 1em;
+  vertical-align:top;
+  display: inline-block;
+}
+
+.space{
+  display: inline-block;
+  margin-left:2.7rem;
+}
+
+img{
+  filter: grayscale(1) contrast(0) brightness(0);
+  color: black;
+}
+
+img:hover{
+  cursor: pointer;
+  filter: grayscale(1) contrast(0) brightness(1);
+}
+
+li{
+  color: black;
+  font-family: monospace;
+  font-size: 1.25em;
+}
