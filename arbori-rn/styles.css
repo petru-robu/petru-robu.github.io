@@ -1,0 +1,64 @@
+/* NAV BAR */
+
+.topnav 
+{
+    background-color: #000000;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+.topnav a 
+{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em 1.12em;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+  
+.topnav a:hover 
+{
+    text-decoration-line: underline;
+}
+  
+
+.topnav a.active 
+{
+    background-color: #0099b4;
+    color: white;
+}
+
+body
+{
+    background-color: rgb(255, 255, 255);
+    padding: 1.25em;
+}
+
+h1
+{
+    color: black;
+    text-align: left;
+    font-family: monospace;
+    font-size: 2.5em;
+}
+
+p
+{
+    
+    color: black;
+    font-family: monospace;
+    font-size: 1.25em;
+}
+
+img
+{
+    max-width: 100%;
+    min-width: auto;
+    height: auto;
+}
+
+.q
+{
+    font-style: italic;
+}

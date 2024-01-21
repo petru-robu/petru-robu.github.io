@@ -28,6 +28,8 @@
     color: white;
 }
 
+
+/* BODY FORMATTING*/
 body
 {
     background-color: rgb(255, 255, 255);
@@ -50,18 +52,26 @@ p
     font-size: 1.25em;
 }
 
-img
+.q
+{
+    font-style: italic;
+}
+
+/*PICS */
+#pg
 {
     padding: 5px;
     max-width: 100%;
     min-width: auto;
     height: auto;
     border: 2px solid rgb(0, 0, 0);
+    filter: grayscale(1) contrast(0) brightness(0);
 }
 
-.q
+#pg:hover
 {
-    font-style: italic;
+  cursor: pointer;
+  filter: grayscale(1) contrast(0) brightness(1);
 }
 
 #engine{
@@ -71,17 +81,19 @@ img
 
 .butoane
 {
-display: inline-block;
+  display: inline-block;
 }
 
-.button{
+.button
+{
   background-color: #ffffff;
   font-family: sans-serif;
   color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);
 }
 
-.button:hover {
+.button:hover 
+{
   background-color: #c4c4c4;
   cursor: pointer;
 }
@@ -96,22 +108,16 @@ display: inline-block;
   display: inline-block;
 }
 
-.space{
-  display: inline-block;
-  margin-left:2.7rem;
+.space
+{
+  /*display: inline-block;
+  margin-left:2.7rem;*/
 }
 
-img{
-  filter: grayscale(1) contrast(0) brightness(0);
-  color: black;
-}
 
-img:hover{
-  cursor: pointer;
-  filter: grayscale(1) contrast(0) brightness(1);
-}
 
-li{
+li
+{
   color: black;
   font-family: monospace;
   font-size: 1.25em;
