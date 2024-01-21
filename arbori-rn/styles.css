@@ -45,7 +45,6 @@ h1
 
 p
 {
-    
     color: black;
     font-family: monospace;
     font-size: 1.25em;
@@ -61,4 +60,15 @@ img
 .q
 {
     font-style: italic;
+}
+
+li
+{
+    color: black;
+    font-family: monospace;
+    font-size: 1.25em;
+}
+
+pre{
+    background-color: rgb(224, 224, 224);
 }
