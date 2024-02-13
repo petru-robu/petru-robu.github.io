@@ -2,19 +2,18 @@
 
 .topnav 
 {
-    background-color: #000000;
+    background-color: #d8d8d8;
     overflow: hidden;
-    font-family: monospace;
+    font-family: serif;
 }
 
 .topnav a 
 {
     float: left;
-    color: #f2f2f2;
+    color: #000000;
     text-align: center;
     padding: 1em 1.12em;
     text-decoration: none;
-    font-size: 1.25em;
 }
   
 .topnav a:hover 
@@ -39,16 +38,14 @@ h1
 {
     color: black;
     text-align: left;
-    font-family: monospace;
-    font-size: 2.5em;
+    font-family: serif;
 }
 
 p
 {
     
     color: black;
-    font-family: monospace;
-    font-size: 1.25em;
+    font-family: serif;
 }
 
 img
