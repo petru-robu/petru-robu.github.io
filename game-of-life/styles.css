@@ -1,58 +1,5 @@
-/* NAV BAR */
+@import "../main_stylesheet.css";
 
-.topnav 
-{
-    background-color: #d8d8d8;
-    overflow: hidden;
-    font-family: serif;
-}
-
-.topnav a 
-{
-    float: left;
-    color: #000000;
-    text-align: center;
-    padding: 1em 1.12em;
-    text-decoration: none;
-}
-  
-.topnav a:hover 
-{
-    text-decoration-line: underline;
-}
-  
-
-.topnav a.active 
-{
-    background-color: #0099b4;
-    color: white;
-}
-
-body
-{
-    background-color: rgb(255, 255, 255);
-    padding: 1.25em;
-}
-
-h1
-{
-    color: black;
-    text-align: left;
-    font-family: serif;
-}
-
-p
-{
-    
-    color: black;
-    font-family: serif;
-}
-.q
-{
-    font-style: italic;
-}
-
-/*PICS */
 #pg
 {
     padding: 5px;
@@ -101,12 +48,6 @@ p
   margin-bottom: 1em;
   vertical-align:top;
   display: inline-block;
-}
-
-.space
-{
-  /*display: inline-block;
-  margin-left:2.7rem;*/
 }
 
 li
