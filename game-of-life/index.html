@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game of Life</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="./js/p5.js"></script>
+    <script src="./js/game.js"></script>
+</head>
+<body>
+    <h1 style=>Game of Life</h1>
+    <p>
+       Jocul Vieții este un automat celular conceput de matematicianul britanic John Horton Conway în 1970.
+       Este un joc fără jucători, în sensul că evoluția sa este determinată de starea sa inițială, nefiind nevoie de nicio intervenție suplimentară. <br>
+       Interacțiunea cu Jocul Vieții constă în crearea unei configurații inițiale si a observa cum aceasta evolueaza.
+    </p>
+
+    <p>
+        Universul Jocului Vieții este o matrice infinita, bidimensională, cu celule pătrate, 
+        fiecare dintre acestea fiind în una dintre cele două stări posibile, vie sau moartă.
+        Stabilirea starilor celulelor se face conform urmatoarelor reguli: <br>
+        <li>Orice celulă vie cu mai puțin de doi vecini vii moare, datorită subpopulării.</li>
+        <li>Orice celulă vie cu doi sau trei vecini vii trăiește în generația următoare.</li>
+        <li>Orice celulă vie cu mai mult de trei vecini vii moare, datorită suprapopulării.</li>
+        <li>Orice celulă moartă cu exact trei vecini vii devine o celulă vie, datorită reproducerii.</li>  
+    </p>
+    <p>
+       Apasati click pentru a activa o celula si apasati din nou pe aceasta pentru a o dezactiva.
+       Mai jos, se afla butoanele de unde puteti controla starea programului. In coltul din stanga este scrisa 
+       generatia curenta.
+       Pentru a incarca un model, apasa pe unul din butoanele acestea:
+    </p>
+
+    <div class="pattern-col">
+        <img id = "pg" src="./gol-img/cap.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p1()">
+        <img id = "pg" src="./gol-img/anvil.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p2()">
+        <img id = "pg" src="./gol-img/average.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p3()">
+        <img id = "pg" src="./gol-img/beacon.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p4()">
+        <img id = "pg"src="./gol-img/bipolebridgepseudobarberpole.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p5()"> 
+        <img id = "pg" src="./gol-img/koksgalaxy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p6()"> 
+        <img id = "pg" src="./gol-img/roteightor.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p24()"> 
+        <img id = "pg" src="./gol-img/byflops.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p8()"> 
+        <img id = "pg" src="./gol-img/butterfly.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p9()">
+        <img id = "pg" src="./gol-img/cuphook.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p10()">
+        <img id = "pg" src="./gol-img/cross2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p11()">
+    </div>
+    <br>
+        
+    <div class="pattern-col">
+        <img id = "pg" src="./gol-img/weekender.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p12()"> 
+        <img id = "pg" src="./gol-img/toadflipper.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p13()"> 
+        <img id = "pg" src="./gol-img/shipinabottle.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p14()"> 
+        <img id = "pg" src="./gol-img/starwithblocks.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p15()"> 
+        <img id = "pg" src="./gol-img/tumbler.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p16()"> 
+        <img id = "pg" src="./gol-img/orion2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p17()">
+        <img id = "pg" src="./gol-img/spider.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p18()">
+        <img id = "pg" src="./gol-img/twopulsarquadrants.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p19()" >
+        <img id = "pg" src="./gol-img/lwsstagalong.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p20()">
+        <img id = "pg" src="./gol-img/nonmonotonicspaceship1.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p21()">
+        <img id = "pg" src="./gol-img/negentropy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p22()">
+    </div> 
+    <br>
+
+    <div id="engine"></div>
+
+    <p>
+        Din aceste butoane controleaza programul: 
+    </p>
+
+    <div class="butoane">
+        <button class="button" onclick="startGame()">Start</button>
+        <button class="button" onclick="stopGame()">Stop</button>
+        <button class="button" onclick="clr_grid()">Clear</button>
+        <button class="button" onclick="random_set()">Rand</button>
+    </div>
+
+
+    <p>
+        John Horton Conway a fost un matematician englez, care a adus nenumarate contributii in matematica, mai exact in: 
+        teoria grupurilor, teoria numerelor, teoria jocurilor si altele.
+    </p>
+    <p>
+        Plecand de la regulile enuntate mai sus, in functie de starea initiala a sistemului pot rezultate tipare impresionante.
+        De-alungul timpului aceste pattern-uri au fost studiate si clasificate, de altfel inca in ziua de azi se descopera nenumarate
+        lucruri noi despre Jocul Vietii.
+    </p>
+    <p>
+        <img src = "./gol-img/john.jpg" style="width:200px;height:200px;">
+    </p>
+    <p>
+        Tiparele se clasifica astfel:<br>
+        <li>Viata statica: Acesta este un pattern care nu se modifica de 
+            la o generatie la alta. Isi pastreaza starea initiala.
+        </li>
+        <li>Oscilatorul:
+            Oscilatorul este un pattern periodic, care revine in starea sa initiala dupa un numar 
+            de pasi (perioada).
+        </li>
+        <li>Naveta:
+            Naveta este un pattern care se repeta, dar la o anumita distanta fata de
+            pozitia initiala, spre deosebire de oscilator. Acest tipar 'se misca' inainte
+            la infinit.
+        </li>
+        <li>Pufaitorul:
+            Pufaitorul este o naveta, dar care lasa in urma sa ramasite, alte celule.
+        </li>
+        <li>
+            Pusca:
+            Pusca este un pattern care genereaza mai multe navete.
+        </li>
+    </p>
+    <p>
+        Acesta sunt exemple de modele de vieti pe care le puteti incerca si desena mai sus: 
+    </p>
+    <p>
+        <img src = "./gol-img/longboat.png" style = "width:100px;height:100px;">
+        <img src = "./gol-img/boatt.png" style = "width:100px;height:100px;">
+        <img src = "./gol-img/tub.png" style = "width:100px;height:100px;">
+        <img src = "./gol-img/loaf.png" style = "width:100px;height:100px;">
+    </p>
+    <p>
+        Mai multe informatii puteti gasi aici:
+        <li> <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia Conway's Game Of Life</a> -wikipedia</li>
+        <li> <a href="https://golly.sourceforge.io/">Un alt simulator de game of life</a> 
+            -probabil ceva mai avansat decat al meu =D</li>
+        <li><a href="https://conwaylife.com/wiki/">LifeWiki</a> -un site care cuprinde multe modele</li>
+    </p>
+    
+
+</body>
+
+<div style="font-size: 12px;">23.02.2022</div>
+
+</html>
