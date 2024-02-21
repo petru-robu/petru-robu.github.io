@@ -1,0 +1,26 @@
+@font-face { 
+    font-family: 'ChordFont'; 
+    src: 
+        url('./MusFrets.otf')  
+        format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+
+.chord
+{
+    font-family: 'ChordFont';
+    font-size: 120px;
+}
+
+.chordn
+{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+tc
+{
+    font-family: 'ChordFont';
+    font-size: 25px; 
+}
