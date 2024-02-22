@@ -13,14 +13,8 @@
     font-size: 120px;
 }
 
-.chordn
+.chord_wrapper
 {
     display: inline-block;
-    margin-left: 10px;
-}
-
-tc
-{
-    font-family: 'ChordFont';
-    font-size: 25px; 
+    margin-right: 50px;
 }
