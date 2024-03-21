@@ -201,7 +201,7 @@ function remove_adj(r, c)
       let veci = a + di[k];
       let vecj = b + dj[k];
 
-      if(veci > 0 && veci < rows && vecj > 0 && vecj < rows)
+      if(veci >= 0 && veci < rows && vecj >= 0 && vecj < rows)
         if(cp_gr[veci][vecj] == 0)
         {
           if(grid[veci][vecj].adj == 0)
@@ -256,7 +256,7 @@ function gen_game(blacki, blackj)
     
       let no_of_adj_mines = 0;
       for(let k=0; k<8; k++)
-        if(i_rnd + di[k] > 0 && i_rnd + di[k] < rows && j_rnd + dj[k] > 0 && j_rnd + dj[k] < cols)
+        if(i_rnd + di[k] >= 0 && i_rnd + di[k] < rows && j_rnd + dj[k] >= 0 && j_rnd + dj[k] < cols)
           if(grid[i_rnd + di[k]][j_rnd + dj[k]].is_bomb)
             no_of_adj_mines++;
 
@@ -270,7 +270,7 @@ function gen_game(blacki, blackj)
     for(let i=0;i<cols;i++)
       for(let j=0;j<rows;j++)
         for(let k=0; k<8; k++)
-          if(i + di[k] > 0 && i + di[k] < rows && j + dj[k] > 0 && j + dj[k] < cols)
+          if(i + di[k] >= 0 && i + di[k] < rows && j + dj[k] >= 0 && j + dj[k] < cols)
             if(grid[i + di[k]][j+ dj[k]].is_bomb)
               grid[i][j].adj++;
 }
