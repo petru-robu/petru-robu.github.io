@@ -250,6 +250,8 @@ function gen_game(blacki, blackj)
       let i_rnd = getRandomArbitrary(0, cols);
       let j_rnd = getRandomArbitrary(0, rows);
 
+      if(i_rnd <= blacki + 1 && i_rnd >= blacki - 1 && j_rnd <= blackj + 1 && j_rnd >= blackj - 1)
+        continue;
 
       if(grid[i_rnd][j_rnd].is_bomb || (i_rnd == blacki) && (j_rnd == blackj))
         continue;
