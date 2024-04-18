@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minesweeper</title>
+    <link rel="stylesheet" type="text/css" href="../main_stylesheet.css"/>
+    <script src="../libs/p5.js"></script>
+    <script src="./js/game.js"></script>
+</head>
+
+<body>
+    <h1>Minesweeper</h1>
+    <p>
+        Minesweeper is a logic puzzle video game genre generally played on personal computers. 
+        The game features a grid of clickable tiles, with hidden "mines" 
+        (depicted as naval mines in the original game) scattered throughout the board. 
+        The objective is to clear the board without detonating any mines, with 
+        help from clues about the number of neighboring mines in each field.<br>
+        A game of Minesweeper begins when the player first selects a cell on a board. 
+        In some variants the first click is guaranteed to be safe, and some further guarantee 
+        that all adjacent cells are safe as well. During the game, the player uses 
+        information given from the opened cells to deduce further cells that are safe to open, 
+        iteratively gaining more information to solve the board. The player is also given the number 
+        of remaining mines in the board, known as the minecount, which is calculated as the total number 
+        of mines subtracted by the number of flagged cells.
+    </p>
+    
+    <p>
+        Left Click - distruge o celula <br>
+        Right Click - marcheaza o celula <br>
+        Remaning mines = numarul de mine care mai exista pe tabla.
+    </p>
+
+    <p id="remaining-mines"></p>
+
+    <p>
+    <div id="engine"></div>
+    </p>
+
+    <p>
+    <button class="button" onclick="new_game()">Reset Board</button>
+    </p>
+
+    <p>
+        Mai multe informatii puteti gasi aici:
+        <li> <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)">Wikipedia Minesweeper</a>-wikipedia</li>
+        <li> <a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/mines.html">O alta implementare a jocului</a>-Sg. Tatham Puzzle Collection</li>
+        <li><a href="https://minesweeper.online/">Minesweeper Online</a>-Minesweeper online</li>
+        <li><a href="https://dash.harvard.edu/bitstream/handle/1/14398552/BECERRA-SENIORTHESIS-2015.pdf">Algorithmic Approaches to Playing Minesweeper</a>-O lucrare despre minesweeper</li>
+    </p>
+</body>
+
+
+<div style="font-size: 12px;">Data crearii: 18.04.2024</div>
+</html>

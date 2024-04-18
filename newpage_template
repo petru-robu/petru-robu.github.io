@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="../main_stylesheet.css"/>
+    <script src="../libs/p5.js"></script>
+    <script src="./js/"></script>
+</head>
+
+
+
+<body>
+    <p>Page Name</p>
+</body>
+
+
+<div style="font-size: 12px;">Data crearii: xx.xx.2024</div>
+</html>
