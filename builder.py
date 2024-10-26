@@ -79,7 +79,7 @@ class HTMLPage():
         cnt, ok = 0, False
         for line in content:
             cnt += 1
-            if f'<a href = "{self.page_name}/index.html">' in line:
+            if f'<li><a href="{self.page_name}/index.html">' in line:
                 ok = True
                 break
 
@@ -107,5 +107,4 @@ if __name__ == '__main__':
     p2 = HTMLPage('Template2')
     p3 = HTMLPage('Template3')
     p1.create()
-    p2.create()
-    p3.create()
+    p1.destroy()
