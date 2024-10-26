@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: #d8e4f1;
+    font-family: sans-serif;
+    color:rgb(0, 0, 0);
+}
+ 
+header{
+    text-align: center;
+    padding:0.1rem;
+}
+
+main{
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+li{
+    list-style-type:none;
+    list-style-position: inside;
+}
+
+ul{
+    padding: 0;
+}
+
+ul li{
+    margin-bottom: 0.5rem;
+    background-color: aliceblue;
+}
+
+.q{
+    font-style: italic;
+}
+
+hr{
+    background-color:black;
+    height:1px;
+    border-width: 0;
+}
+
+footer{
+    text-align: center;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game of Life</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="../js/p5.js"></script>
+    <script src="./js/game.js"></script>
+</head>
+<body>
+       
+    <main>
+        <h1>Game of Life</h1>
+        <p>
+        Jocul Vieții este un automat celular conceput de matematicianul britanic John Horton Conway în 1970.
+        Este un joc fără jucători, în sensul că evoluția sa este determinată de starea sa inițială, nefiind nevoie de nicio intervenție suplimentară.
+        Interacțiunea cu Jocul Vieții constă în crearea unei configurații inițiale si a observa cum aceasta evolueaza.
+        </p>
+
+        <p>
+            Universul Jocului Vieții este o matrice infinita, bidimensională, cu celule pătrate, 
+            fiecare dintre acestea fiind în una dintre cele două stări posibile, vie sau moartă.
+            Stabilirea starilor celulelor se face conform urmatoarelor reguli: <br>
+            <ul>
+            <li>Orice celulă vie cu mai puțin de doi vecini vii moare, datorită subpopulării.</li>
+            <li>Orice celulă vie cu doi sau trei vecini vii trăiește în generația următoare.</li>
+            <li>Orice celulă vie cu mai mult de trei vecini vii moare, datorită suprapopulării.</li>
+            <li>Orice celulă moartă cu exact trei vecini vii devine o celulă vie, datorită reproducerii.</li>  
+            </ul>
+        </p>
+        <p>
+        Apasati click pentru a activa o celula si apasati din nou pe aceasta pentru a o dezactiva.
+        Mai jos, se afla butoanele de unde puteti controla starea programului. In coltul din stanga este scrisa 
+        generatia curenta.
+        Pentru a incarca un model, apasa pe unul din butoanele acestea:
+        </p>
+
+        <div class="pattern-col">
+            <img id = "pg" src="./img/cap.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p1()">
+            <img id = "pg" src="./img/anvil.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p2()">
+            <img id = "pg" src="./img/average.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p3()">
+            <img id = "pg" src="./img/beacon.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p4()">
+            <img id = "pg"src="./img/bipolebridgepseudobarberpole.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p5()"> 
+            <img id = "pg" src="./img/koksgalaxy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p6()"> 
+            <img id = "pg" src="./img/roteightor.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p24()"> 
+            <img id = "pg" src="./img/byflops.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p8()"> 
+            <img id = "pg" src="./img/butterfly.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p9()">
+            <img id = "pg" src="./img/cuphook.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p10()">
+            <img id = "pg" src="./img/cross2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p11()">
+        </div>
+        <br>
+            
+        <div class="pattern-col">
+            <img id = "pg" src="./img/weekender.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p12()"> 
+            <img id = "pg" src="./img/toadflipper.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p13()"> 
+            <img id = "pg" src="./img/shipinabottle.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p14()"> 
+            <img id = "pg" src="./img/starwithblocks.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p15()"> 
+            <img id = "pg" src="./img/tumbler.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p16()"> 
+            <img id = "pg" src="./img/orion2.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p17()">
+            <img id = "pg" src="./img/spider.png" alt="imagine-lipsa" style="width:32px; height:32px;" onclick="p18()">
+            <img id = "pg" src="./img/twopulsarquadrants.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p19()" >
+            <img id = "pg" src="./img/lwsstagalong.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p20()">
+            <img id = "pg" src="./img/nonmonotonicspaceship1.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p21()">
+            <img id = "pg" src="./img/negentropy.png" alt="imagine-lipsa" style="width:32px;height:32px;" onclick="p22()">
+        </div> 
+        <br>
+
+        <div id="engine"></div>
+
+        <p>
+            Din aceste butoane controleaza programul: 
+        </p>
+
+        <div class="butoane">
+            <button class="button" onclick="startGame()">Start</button>
+            <button class="button" onclick="stopGame()">Stop</button>
+            <button class="button" onclick="clr_grid()">Clear</button>
+            <button class="button" onclick="random_set()">Rand</button>
+        </div>
+
+        <p>
+            Mai multe informatii puteti gasi aici:
+            
+                <li> <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia Conway's Game Of Life</a></li>
+                <li> <a href="https://golly.sourceforge.io/">Un alt simulator de game of life</a> </li>
+                <li><a href="https://conwaylife.com/wiki/">LifeWiki</a></li>
+        
+        </p>
+    </main>
+
+</body>
+</html>

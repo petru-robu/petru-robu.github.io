@@ -2,31 +2,62 @@
 <html>
 
 <head>
-    <title>Site Petru</title>
-    <link rel="stylesheet" href="./main_stylesheet.css">
-    <script src="./0_homepage/js/main.js"></script>
+    <title>Petru Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
+    <header>
+        <h1>Petru Razvan (personal website)</h1>
+    </header>
 
-    <div id="random-gif"></div>
-    
-    <h1>Bine ai venit</h1> 
-    <p>
-        Ma numesc Robu Petru Razvan si acesta este blogul meu personal.<br>
-        Diferitele pagini ale site-ului:
-    </p>
-    <p>
-        <a href="./index.html">Home</a><br>
-        <a href="./1_game-of-life/index.html">Game of life</a><br>
-        <a href="./2_minesweeper/index.html">Minesweeper</a><br>
-        <a href="./3_gol-empty/index.html">*Game_of_life</a><br>
-        <a href="./4_mine-empty/index.html">*Minesweeper</a><br>
-    </p>
-    
-    <div id="random-quotes"></div>
+    <main>
+        <p>
+            This is my personal website. Here you can see some of my projects, and
+            you can have a glimpse of my interests and passions.
+        </p>
 
+        <p>
+            Site pages:
+        </p>
+        <nav class="menu">
+            <ul>
+                <li><a href="0_GameOfLife/index.html">Game of Life</a></li>
+				<li><a href="Template1/index.html">Template1</a></li>
+				<li><a href="Template2/index.html">Template2</a></li>
+				<li><a href="Template3/index.html">Template3</a></li>
+                <li><a href="1_MineSweeper/index.html">Mine Sweeper</a></li>
+        </nav>
+    
+        <section>
+            <p>Five random selected quotes (refresh page to get new quotes): </p>
+            <div id="random-quotes"></div>
+        </section>
+
+        <section>
+            <img src="./img/giphy0.gif">
+        </section>
+
+        <section>
+            <p>
+                My information: 
+            </p> 
+            <ul>
+                <li>Email: petru.robu@hotmail.com</li>
+                <li><a href="">GitHub Profile</a></li>
+                <li><a href="https://www.youtube.com/@petru-robu64">Youtube Channel</a></li>
+            </ul>
+        </section>
+
+    </main> 
+
+    <footer>
+        <p>Date of site creation: 10 Apr 2024</p>
+    </footer>
 </body>
+
+
 
 <div id="quote-container" style="display: none;">
     <p class="q">
