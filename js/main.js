@@ -1,7 +1,8 @@
 
-function getRandomInt(max) {
+function getRandomInt(max) 
+{
     return Math.floor(Math.random() * max);
-  }
+}
 
 function random_quote() 
 {
@@ -14,8 +15,7 @@ function random_quote()
     var randomQuotesContainer = document.getElementById("random-quotes");
 
     randomQuotes.forEach(function(quote){
-        randomQuotesContainer.innerHTML += "<p class=\"q\">" + quote.innerText + "</p>";
-    });   
+        randomQuotesContainer.innerHTML += "<p class=\"q\">" + quote.innerText + "</p>";});   
 }
 
 window.onload = function() {

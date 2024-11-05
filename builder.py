@@ -103,8 +103,5 @@ class HTMLPage():
 
 if __name__ == '__main__':
 
-    p1 = HTMLPage('Template1')
-    p2 = HTMLPage('Template2')
-    p3 = HTMLPage('Template3')
+    p1 = HTMLPage('Sandbox')
     p1.create()
-    p1.destroy()

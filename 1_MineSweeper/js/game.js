@@ -68,7 +68,7 @@ function matrice(cols, rows)
 
 function setup()
 {
-  window.addEventListener("contextmenu", e => e.preventDefault());
+  //window.addEventListener("contextmenu", e => e.preventDefault());
   color_white = color(255, 255, 255); color_black = color(0, 0, 0);
   color_red1 = color(255, 200, 200); color_gray5 = color(70, 70, 70);
   color_gray4 = color(75, 75, 75); color_gray3 = color(120, 120, 120);
@@ -89,13 +89,13 @@ function setup()
 function draw()
 {
   background(10);
-  frameRate(17);
+  frameRate(60);
 
   for(let i=0;i<cols;i++)
     for(let j=0;j<rows;j++)
     {
-      let x=i*res+2;
-      let y=j*res+2;
+      let x = i*res+2;
+      let y = j*res+2;
 
       stroke(color_gray5);
       strokeWeight(2);
@@ -170,8 +170,6 @@ function mousePressed(event)
           grid[r][c].is_flagged = 0;
       }   
     }
-      
-    calculate_remaining_mines();
 }
 
 function remove_adj(r, c)
@@ -288,7 +286,4 @@ function calculate_remaining_mines()
           cnt++;
       }
   remaining_mines = cnt;
-
-  var s = "Remaining mines: " + cnt.toString();
-  document.getElementById("remaining-mines").innerHTML = s;
 }

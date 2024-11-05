@@ -13,27 +13,29 @@
     <main>
         <h1>Game of Life</h1>
         <p>
-        Jocul Vieții este un automat celular conceput de matematicianul britanic John Horton Conway în 1970.
-        Este un joc fără jucători, în sensul că evoluția sa este determinată de starea sa inițială, nefiind nevoie de nicio intervenție suplimentară.
-        Interacțiunea cu Jocul Vieții constă în crearea unei configurații inițiale si a observa cum aceasta evolueaza.
+            The Game of Life, also known as Conway's Game of Life or simply Life, is a cellular automaton 
+            devised by the British mathematician John Horton Conway in 1970.
+            One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
+            It is Turing complete and can simulate a universal constructor or any other Turing machine.
         </p>
 
         <p>
-            Universul Jocului Vieții este o matrice infinita, bidimensională, cu celule pătrate, 
-            fiecare dintre acestea fiind în una dintre cele două stări posibile, vie sau moartă.
-            Stabilirea starilor celulelor se face conform urmatoarelor reguli: <br>
+            The universe of the Game of Life is an infinite, two-dimensional orthogonal 
+            grid of square cells, each of which is in one of two possible states, 
+            live or dead (or populated and unpopulated, respectively). 
+            Every cell interacts with its eight neighbors, which are the cells that are horizontally, 
+            vertically, or diagonally adjacent. At each step in time, the following transitions occur: 
+
             <ul>
-            <li>Orice celulă vie cu mai puțin de doi vecini vii moare, datorită subpopulării.</li>
-            <li>Orice celulă vie cu doi sau trei vecini vii trăiește în generația următoare.</li>
-            <li>Orice celulă vie cu mai mult de trei vecini vii moare, datorită suprapopulării.</li>
-            <li>Orice celulă moartă cu exact trei vecini vii devine o celulă vie, datorită reproducerii.</li>  
+            <li id="hl">Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+            <li id="hl">Any live cell with two or three live neighbours lives on to the next generation.</li>
+            <li id="hl">Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+            <li id="hl">Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>  
             </ul>
         </p>
         <p>
-        Apasati click pentru a activa o celula si apasati din nou pe aceasta pentru a o dezactiva.
-        Mai jos, se afla butoanele de unde puteti controla starea programului. In coltul din stanga este scrisa 
-        generatia curenta.
-        Pentru a incarca un model, apasa pe unul din butoanele acestea:
+        Click on the cells to activate/deactivate them.<br>
+        To load a model, press one of these buttons:
         </p>
 
         <div class="pattern-col">
@@ -69,22 +71,23 @@
         <div id="engine"></div>
 
         <p>
-            Din aceste butoane controleaza programul: 
+            Control the program from here:
         </p>
 
         <div class="butoane">
             <button class="button" onclick="startGame()">Start</button>
             <button class="button" onclick="stopGame()">Stop</button>
-            <button class="button" onclick="clr_grid()">Clear</button>
+            <button class="button" onclick="clear_grid()">Clear</button>
             <button class="button" onclick="random_set()">Rand</button>
         </div>
 
         <p>
-            Mai multe informatii puteti gasi aici:
-            
+            More information:
+            <ul>
                 <li> <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia Conway's Game Of Life</a></li>
-                <li> <a href="https://golly.sourceforge.io/">Un alt simulator de game of life</a> </li>
-                <li><a href="https://conwaylife.com/wiki/">LifeWiki</a></li>
+                <li> <a href="https://golly.sourceforge.io/">Another GoL simulator</a> </li>
+                <li> <a href="https://conwaylife.com/wiki/">LifeWiki</a></li>
+            </ul>
         
         </p>
     </main>

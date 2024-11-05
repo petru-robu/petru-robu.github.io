@@ -1,5 +1,5 @@
 
-function matrice(cols, rows)
+function create_matrix(cols, rows)
 {
   let arr = new Array(cols);
   for(let i=0;i<cols;i++)
@@ -19,72 +19,60 @@ let matc;
 
 function setup()
 {
-  var canv=createCanvas(1000, 600);
+  var canv = createCanvas(1000, 600);
   canv.parent('engine');
-  gnr=0;
+  gnr = 0;
   cols= width/res;
   rows= height/res;
-  grid = matrice(cols, rows);
+  grid = create_matrix(cols, rows);
 }
 
-
-//POPULAREA MATRICII LA CLICK STG
-function mousePressed() {
+function mousePressed() 
+{
   let r = (mouseX - (mouseX % res)) / res;
   let c = (mouseY - (mouseY % res)) / res;
-  if (r<= width && c<= width) { // Valid row, col
-    grid[r][c] = -1 * grid[r][c] + 1; // Invert the cell
-  }
+  if (r <= width && c <= width)
+    grid[r][c] = -1 * grid[r][c] + 1;
 }
 
-function get_mat()
+
+//Buttons:
+function startGame() 
 {
-  for(let i=0;i<cols;i++)
-    for(let j=0;j<rows;j++)
-      if(grid[i][j]==1)
-      {
-        let strg="grid["+i+']'+'['+j+']'+"=1;";
-        console.log(strg);
-      }
+  if (state == 0) 
+    state = 1;
 }
 
-
-
-
-//FUNCTIILE BUTOANELOR
-function startGame() {
-  if (state == 0) state = 1;
-}
-
-function stopGame() {
-  if (state == 1) state = 0;
-}
-
-function clr_grid()
+function stopGame() 
 {
-  for(let i=0;i<cols;i++)
-    for(let j=0;j<rows;j++) grid[i][j]=0;
+  if (state == 1) 
+    state = 0;
+}
+
+function clear_grid()
+{
+  for(let i=0; i<cols; i++)
+    for(let j=0; j<rows; j++) 
+      grid[i][j]=0;
   gnr=0;
 }
 
 function random_set()
 {
-  for(let i=3;i<cols-3;i++)
-    for(let j=3;j<rows-3;j++) grid[i][j]= floor(random(2));
+  for(let i=3; i<cols-3; i++)
+    for(let j=3; j<rows-3; j++) 
+      grid[i][j] = floor(random(2));
 }
 
-
-
-//UPDATARE MATRICE ( FRAME BY FRAME )
+//Draw
 function draw()
 {
   background(10);
   frameRate(8);
 
-  for(let i=0;i<cols;i++)
-    for(let j=0;j<rows;j++)
+  for(let i=0; i<cols; i++)
+    for(let j=0; j<rows; j++)
     {
-
       let x=i*res;
       let y=j*res;
       if(grid[i][j]==1)
@@ -102,35 +90,37 @@ function draw()
     }
     noStroke();
     fill(140);
-    let s = "generatia:"+' '+gnr;
+    let s = "Generation:"+' '+gnr;
     let r;
-    if(state==1) r = "ruleaza: DA";
-    else r = "ruleaza: NU";
+    if(state==1) r = "Running: Yes";
+    else r = "Running: No";
 
     text(s, 10, 20);
     text(r, 10, 40);
 
     if(state==1)
     {
-      let next=matrice(cols, rows);
-      for(let i=0;i<cols;i++)
-        for(let j=0;j<rows;j++)
+      let next = create_matrix(cols, rows);
+      for(let i=0; i<cols; i++)
+        for(let j=0; j<rows; j++)
         {
-            let n=nr_vecini_in_viata(grid,i,j);
-            if(grid[i][j]==0&&n==3) next[i][j] = 1;
-               else if(grid[i][j]==1&&(n<2||n>3)) next[i][j] = 0;
-                       else next[i][j]=grid[i][j];
-        }
+            let n = alive_neighbours(grid,i,j);
 
-      grid=next;
+            //the three rules of GoL
+            if(grid[i][j]==0 && n==3)   
+              next[i][j] = 1;
+            else if(grid[i][j]==1 && (n<2||n>3)) 
+              next[i][j] = 0;
+            else 
+              next[i][j] = grid[i][j];
+        }
+      grid = next;
       gnr++;
     }
 }
 
-
-
-//NR DE VECINI IN VIATA AL UNEI CELULE
-function nr_vecini_in_viata(grid, x, y)
+//alive_neighbours
+function alive_neighbours(grid, x, y)
 {
   let sum=0;
   for(let i=-1; i<2; i++)
@@ -138,19 +128,17 @@ function nr_vecini_in_viata(grid, x, y)
     {
       let col= (x+i+cols)%cols;
       let row= (y+j+rows)%rows;
-      sum+=grid[col][row];
+      sum += grid[col][row];
     }
 
-  sum-=grid[x][y];
+  sum -= grid[x][y];
   return sum;
 }
 
-
-
-
+//paterns load
 function p1()
 {
-  clr_grid();
+  clear_grid();
   grid[19][13]=1;
   grid[19][14]=1;
   grid[20][12]=1;
@@ -159,21 +147,20 @@ function p1()
   grid[21][14]=1;
   grid[22][13]=1;
   grid[22][14]=1;
-
 }
 
 function p2()
 {
-  clr_grid();
+  clear_grid();
   grid[14][15]=1;
-   grid[15][14]=1;
-   grid[15][16]=1;
-   grid[16][14]=1;
-   grid[16][16]=1;
-   grid[17][14]=1;
-   grid[17][16]=1;
-   grid[17][17]=1;
-   grid[18][14]=1;
+  grid[15][14]=1;
+  grid[15][16]=1;
+  grid[16][14]=1;
+  grid[16][16]=1;
+  grid[17][14]=1;
+  grid[17][16]=1;
+  grid[17][17]=1;
+  grid[18][14]=1;
   grid[19][15]=1;
   grid[19][16]=1;
   grid[19][17]=1;
@@ -182,7 +169,7 @@ function p2()
 
 function p3()
 {
-  clr_grid();
+  clear_grid();
   grid[4][14]=1;
   grid[5][12]=1;
   grid[5][13]=1;
@@ -229,7 +216,7 @@ function p3()
 
 function p4()
 {
-  clr_grid();
+  clear_grid();
   grid[13][11]=1;
   grid[13][12]=1;
   grid[14][11]=1;
@@ -240,7 +227,7 @@ function p4()
 
 function p5()
 {
-  clr_grid();
+  clear_grid();
   grid[7][21]=1;
   grid[7][22]=1;
   grid[8][22]=1;
@@ -269,7 +256,7 @@ function p5()
 
 function p6()
 {
-  clr_grid();
+  clear_grid();
   grid[12][14]=1;
   grid[12][16]=1;
   grid[12][19]=1;
@@ -303,7 +290,7 @@ function p6()
 
 function p7()
 {
-  clr_grid();
+  clear_grid();
   grid[19][13]=1;
   grid[19][14]=1;
   grid[20][13]=1;
@@ -318,7 +305,7 @@ function p7()
 
 function p8()
 {
-    clr_grid();
+    clear_grid();
   grid[25][14]=1;
   grid[26][12]=1;
   grid[26][14]=1;
@@ -337,7 +324,7 @@ function p8()
 
 function p9()
 {
-  clr_grid();
+  clear_grid();
   grid[15][13]=1;
   grid[15][14]=1;
   grid[15][15]=1;
@@ -351,7 +338,7 @@ function p9()
 
 function p10()
 {
-  clr_grid();
+  clear_grid();
   grid[12][13]=1;
   grid[12][14]=1;
   grid[13][13]=1;
@@ -375,7 +362,7 @@ function p10()
 function p11()
 {
 
-  clr_grid();
+  clear_grid();
   grid[12][12]=1;
   grid[12][15]=1;
   grid[12][17]=1;
@@ -440,7 +427,7 @@ function p11()
 
 function p12()
 {
-  clr_grid();
+  clear_grid();
   grid[7][6]=1;
   grid[8][4]=1;
   grid[8][5]=1;
@@ -483,7 +470,7 @@ function p12()
 
 function p13()
 {
- clr_grid();
+ clear_grid();
  grid[7][8]=1;
   grid[7][13]=1;
   grid[8][6]=1;
@@ -519,8 +506,8 @@ function p13()
 
 function p14()
 {
-clr_grid();
-grid[10][12]=1;
+  clear_grid();
+  grid[10][12]=1;
   grid[10][13]=1;
   grid[10][20]=1;
   grid[10][21]=1;
@@ -610,8 +597,8 @@ grid[10][12]=1;
 
 function p15()
 {
-clr_grid();
-grid[6][6]=1;
+  clear_grid();
+  grid[6][6]=1;
   grid[6][7]=1;
   grid[6][11]=1;
   grid[6][15]=1;
@@ -667,8 +654,8 @@ grid[6][6]=1;
 
 function p16()
 {
-clr_grid();
-grid[11][15]=1;
+  clear_grid();
+  grid[11][15]=1;
   grid[11][16]=1;
   grid[12][14]=1;
   grid[13][15]=1;
@@ -688,8 +675,8 @@ grid[11][15]=1;
 
 function p17()
 {
-clr_grid();
-grid[28][9]=1;
+  clear_grid();
+  grid[28][9]=1;
   grid[29][8]=1;
   grid[29][9]=1;
   grid[30][8]=1;
@@ -722,10 +709,11 @@ grid[28][9]=1;
   grid[40][12]=1;
   grid[40][14]=1;
 }
+
 function p18()
 {
-clr_grid();
-grid[3][9]=1;
+  clear_grid();
+  grid[3][9]=1;
   grid[3][10]=1;
   grid[4][9]=1;
   grid[4][12]=1;
@@ -784,10 +772,11 @@ grid[3][9]=1;
   grid[29][9]=1;
   grid[29][10]=1;
 }
+
 function p19()
 {
-clr_grid();
-grid[13][14]=1;
+  clear_grid();
+  grid[13][14]=1;
   grid[13][15]=1;
   grid[13][16]=1;
   grid[15][13]=1;
@@ -809,8 +798,8 @@ grid[13][14]=1;
 
 function p20()
 {
-clr_grid();
-grid[18][6]=1;
+  clear_grid();
+  grid[18][6]=1;
   grid[18][7]=1;
   grid[18][8]=1;
   grid[18][14]=1;
@@ -932,8 +921,8 @@ grid[18][6]=1;
 
 function p21()
 {
-clr_grid();
-grid[10][10]=1;
+  clear_grid();
+  grid[10][10]=1;
   grid[10][14]=1;
   grid[11][10]=1;
   grid[11][14]=1;
@@ -1003,8 +992,8 @@ grid[10][10]=1;
 
 function p22()
 {
-clr_grid();
-grid[9][15]=1;
+  clear_grid();
+  grid[9][15]=1;
   grid[9][16]=1;
   grid[10][15]=1;
   grid[10][16]=1;
@@ -1044,7 +1033,7 @@ grid[9][15]=1;
 
 function p23()
 {
-  clr_grid();
+  clear_grid();
   grid[6][14]=1;
   grid[6][16]=1;
   grid[7][12]=1;
@@ -1209,7 +1198,7 @@ function p23()
 
 function p24()
 {
-  clr_grid();
+  clear_grid();
   grid[6][17]=1;
   grid[7][5]=1;
   grid[7][6]=1;
@@ -1253,7 +1242,7 @@ function p24()
 
 function p25()
 {
-  clr_grid();
+  clear_grid();
   grid[13][11]=1;
   grid[13][12]=1;
   grid[13][16]=1;
