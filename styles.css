@@ -14,8 +14,9 @@ header{
 }
 
 main{
-    text-align: center;
-    padding: 1rem;
+   
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 ul{
