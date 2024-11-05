@@ -4,7 +4,7 @@ body{
     box-sizing: border-box;
 
     background-color: #d8e4f1;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color:rgb(0, 0, 0);
 }
  
@@ -18,13 +18,9 @@ main{
     padding: 1rem;
 }
 
-
-li{
+ul{
     list-style-type:none;
     list-style-position: inside;
-}
-
-ul{
     padding: 0;
 }
 
