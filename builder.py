@@ -103,5 +103,5 @@ class HTMLPage():
 
 if __name__ == '__main__':
 
-    p1 = HTMLPage('Sandbox')
+    p1 = HTMLPage('4_TicTacToe')
     p1.create()
