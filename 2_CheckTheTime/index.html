@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>4_TicTacToe</title>
+    <title>Check the time maybe?</title>
     <link rel="stylesheet" type="text/css" href="../styles.css"/>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <script src="./js/ttt.js" charset="UTF-8"></script>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -16,9 +16,9 @@
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="0_GameOfLife/index.html">Game of Life</a>
-                    <a href="1_MineSweeper/index.html">Mine Sweeper</a>
-                    <a href="4_TicTacToe/index.html">Tic Tac Toe (prompt)</a>
+                    <a href="../0_GameOfLife/index.html">Game of Life</a>
+                    <a href="../1_MineSweeper/index.html">Mine Sweeper</a>
+                    <a href="../4_TicTacToe/index.html">Tic Tac Toe (prompt)</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -26,16 +26,18 @@
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="2_CheckTheTime/index.html">Qué hora es?</a>
+                    <a href="../2_CheckTheTime/index.html">Qué hora es?</a>
                 </div>
             </div>
             <a href="#about">About</a>
             <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">&#9776;</a>
         </div>
     </nav>
-    
     <main>
-    <h1>Tic Tac Toe in prompt!</h1>
+        <h1>Qué hora es?</h1>
+
+        <p id="demo"></p>
+        <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
     </main>
 </body>
             

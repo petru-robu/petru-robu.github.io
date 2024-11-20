@@ -1,0 +1,134 @@
+<div id="quote-container" style="display: none;">
+    <p class="q">
+        "Nature uses only the longest threads to weave her patterns, 
+        so each small piece of her fabric reveals the organization of the entire tapestry."
+        -Richard Feynman
+    </p>
+
+    <p class="q">
+        "When joy disappears, look for your mistake" - Lev Tolstoi
+    </p>
+
+    <p class="q">
+        "Beauty is unbearable, drives us to despair, offering us for a minute the glimpse of an eternity that we should like to stretch out over the whole of time." -Albert Camus
+    </p>
+    <p class="q">
+        "All men's miseries derive from not being able to sit in a quiet room alone." -Blaise Pascal
+    </p>
+
+    <p class="q">
+        "If you are lonely when you're alone, you are in bad company." -Jean-Paul Sartre
+    </p>
+    <p class="q">
+        "If all misfortunes were laid in one common heap whence everyone must take an equal portion,
+         most people would be contented to take their own and depart." -Socrates
+    </p>
+    <p class="q">
+        "No finite point has meaning without an infinite reference point." -Jean-Paul Sartre
+    </p>
+
+    <p class="q">"Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something
+         without loosing something." ~ Richard Stallman</p>
+
+    <p class="q">
+        "If the users don't control the program, the program controls the users.
+         With proprietary software, there is always some entity, the "owner" of the program, 
+         hat controls the program and through it, exercises power over its users.
+          A nonfree program is a yoke, an instrument of unjust power." ~ Richard Stallman
+    </p>
+
+    <p class="q">
+        "Free software' is a matter of liberty, not price. 
+        To understand the concept, you should think of 'free' as in 'free speech,'
+         not as in 'free beer'." ~ Richard Stallman
+    </p>
+
+    <p class="q">
+        "Value your freedom or you will lose it, teaches history. "Don't bother us with politics," 
+        respond those who don't want to learn." ~ Richard Stallman
+    </p>
+
+    <p class="q">
+        "C makes it easy to shoot yourself in the foot; 
+        C++ makes it harder, but when you do it blows your whole leg off." ~ Bjarne Stroustrup
+    </p>
+
+    <p class="q">
+        "Do what you think is interesting, do something that you think is fun and worthwhile,
+         because otherwise you won't do it well anyway." ~ Brian Kernighan
+    </p>
+
+    <p class="q">
+        "Programming is the art of telling another human being
+        what one wants the computer to do." ~ Donald Knuth
+    </p>
+
+    <p class="q">
+        "Always remember, however, that there's usually a simpler and
+         better way to do something than the first way that pops into your head." ~ Donald Knuth
+    </p>
+
+    <p class="q">
+        "Simplicity and elegance are unpopular because they require hard work and discipline 
+        to achieve and education to be appreciated." ~ Edsger Dijkstra
+    </p>
+
+    <p class="q">
+        "The question of whether computers can think is like the question of whether submarines
+         can swim." ~ Edsger Dijkstra
+    </p>
+
+    <p class="q">
+        "The chief purpose of life, for any of us, is to increase according to our capacity our knowledge of God by all 
+        means we have, and to be moved by it to praise and thanks." ~ J. R. R. Tolkien
+    </p>
+
+    <p class="q">
+        "A man that flies from his fear may find that he has only taken a short cut to meet it." ~ J. R. R. Tolkien
+    </p>
+
+    <p class="q">
+        "There is nothing like looking, if you want to find something. You certainly usually find something, if you look, 
+        but it is not always quite the something you were after." ~ J. R. R. Tolkien
+    </p>
+
+    <p class="q">
+        "We all long for Eden, and we are constantly glimpsing it: our whole 
+        nature at its best and least corrupted, its gentlest and most human, 
+        is still soaked with the sense of exile." ~ J. R. R. Tolkien
+    </p>
+
+    <p class="q">
+        "You can't go back and change the beginning, but you can 
+        start where you are and change the ending." ~ C. S. Lewis
+    </p>
+
+    <p class="q">
+        "Humility is not thinking less of yourself, it's thinking of yourself less." ~ C. S. Lewis
+    </p>
+
+    <p class="q">
+        "If nothing in this world satisfies me, perhaps it is because I was made for another world." ~ C. S. Lewis
+    </p>
+
+    <p class="q">
+        "We must stop regarding unpleasant or unexpected things as interruptions of real life. 
+        The truth is that interruptions are real life." ~ C. S. Lewis
+    </p>
+
+    <p class="q">
+        "It may be hard for an egg to turn into a bird: it would be a jolly sight harder 
+        for it to learn to fly while remaining an egg. We are like eggs at present. And you cannot go on indefinitely 
+        being just an ordinary, decent egg. We must be hatched or go bad." ~ C. S. Lewis
+    </p>
+
+    <p class="q">
+        "If you think of this world as a place intended simply for our happiness, you find it quite intolerable: 
+        think of it as a place of training and correction and it's not so bad." ~ C. S. Lewis
+    </p>
+    
+    <p class="q">
+        "The most dangerous ideas in a society are not the ones being argued, 
+        but the ones that are assumed." ~ C. S. Lewis
+    </p>
+</div>
