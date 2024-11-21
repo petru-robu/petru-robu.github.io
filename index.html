@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
 		<title>Home</title>
+		<link rel="stylesheet" href="./global-styles.css">
+		<link rel="stylesheet" href="./animation.css">
 
-		<link rel="stylesheet" href="./global-elements/global-styles.css">
-
-		<script src="./global-elements/js/main.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/quote-picker.js"></script>
 	</head>
 
 	<body>
-		<nav>
-			<div class="topnav" id="myTopnav">
+		<div class="topnav" id="myTopnav">
+			<nav>
 				<a href="./index.html" class="active">Home</a>
 				<div class="dropdown">
 					<button class="dropbtn">Projects
-					<i class="fa fa-caret-down"></i>
+						<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-content">
 						<a href="./1_GameOfLife/index.html">Game of Life</a>
@@ -25,46 +27,65 @@
 				</div>
 				<div class="dropdown">
 					<button class="dropbtn">Other
-					<i class="fa fa-caret-down"></i>
+						<i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-content">
 						<a href="./3_CheckTheTime/index.html">Qué hora es?</a>
 					</div>
 				</div>
 				<a href="#about">About</a>
-				<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">&#9776;</a>
-			</div>
-		</nav>
+				<a href="javascript:void(0);" class="icon"
+					onclick="responsiveNav()">&#9776;</a>
+			</nav>
+		</div>
 
 		<header>
-			<h1>Petru Razvan</h1>
+			<div class="textAnimation">
+				<span class="key">P</span>
+				<span class="key">E</span>
+				<span class="key">T</span>
+				<span class="key">R</span>
+				<span class="key">U</span>
+			</div>
 		</header>
 
 		<main>
-			<h2>
+			<h3>
 				This is my personal website. Here you can see some of my projects and
 				have a glimpse of my interests and passions.
-			</h2>
+			</h3>
+
 			<p>
-				Here is my information if you'd wish to 
-				contact me: <a href="https://github.com/petru-robu">GitHub Profile</a> | 
-				<a href="https://www.youtube.com/@petru-robu64">Youtube Channel</a> | 
-				Email: petru.robu@hotmail.com 
+				Here is my information if you'd wish to
+				contact me:
+				<a href="https://github.com/petru-robu">GitHub Profile</a> |
+				<a href="https://www.youtube.com/@petru-robu64">Youtube Channel</a> |
+				Email: petru.robu@hotmail.com
 			</p>
 
 			<div class="tile-container">
 				<div class="tile" onclick="location.href='1_GameOfLife/index.html'">
 					<h3>Game of Life</h3>
-					<p>This is the description for Tile 1.</p>
+					<p> Conway's Game of Life is a cellular automaton that is played 
+						on a 2D square grid. Each square (or "cell") on the grid can be either 
+						alive or dead, and they evolve according to some rules. </p>
 				</div>
 
 				<div class="tile" onclick="location.href='2_MineSweeper/index.html'">
 					<h3>Minesweeper</h3>
-					<p>This is the description for Tile 2.</p>
+					<p> Minesweeper is a logic puzzle video game genre generally 
+						played on personal computers. The game features a grid of clickable tiles,
+						with hidden "mines" scattered throughout the board.</p>
 				</div>
 			</div>
+
+			<h3>
+				Here is a random quote picker. It randomly picks 5
+				 quotes from a given list (refresh page to get new quotes):
+			</h3>
+
+			<div id="quotesContainer"></div>
+
 		</main>
-
 	</body>
-
 </html>

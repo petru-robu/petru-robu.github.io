@@ -68,7 +68,10 @@ function matrice(cols, rows)
 
 function setup()
 {
-  //window.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+
   color_white = color(255, 255, 255); color_black = color(0, 0, 0);
   color_red1 = color(255, 200, 200); color_gray5 = color(70, 70, 70);
   color_gray4 = color(75, 75, 75); color_gray3 = color(120, 120, 120);

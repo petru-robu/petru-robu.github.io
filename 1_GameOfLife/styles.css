@@ -1,14 +1,15 @@
-#pg
+.pg
 {
-    padding: 5px;
-    max-width: 100%;
-    min-width: auto;
-    height: auto;
-    border: 2px solid rgb(0, 0, 0);
-    filter: grayscale(1) contrast(0) brightness(0);
+  width: 32px;
+  height: 32px;
+  padding: 1em;
+  
+  height: auto;
+  border: 2px solid rgb(0, 0, 0);
+  filter: grayscale(1) contrast(0) brightness(0);
 }
 
-#pg:hover
+.pg:hover
 {
   cursor: pointer;
   filter: grayscale(1) contrast(0) brightness(1);
@@ -26,7 +27,7 @@
 
 .button
 {
-  background-color: #ffffff;
+  background-color:#ffffff;
   font-family: sans-serif;
   color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);

@@ -1,82 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Minesweeper</title>
+        <link rel="stylesheet" type="text/css" href="../global-styles.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script defer src="../js/main.js"></script>
+        <script defer src="../js/fetch-nav.js"></script>
+        <script src="../js/p5.js"></script>
+        <script src="./js/game.js"></script>
+    </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minesweeper</title>
-    <link rel="stylesheet" type="text/css" href="../global-elements/global-styles.css"/>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    
+    <body>
+        <div id="navbar"></div>
 
-    <script src="../global-elements/js/main.js"></script>
-    <script src="../global-elements/js/p5.js"></script>
-    <script src="./js/game.js"></script>
-</head>
+        <main>
+            <h1>Minesweeper</h1>
+            <p>
+                Minesweeper is a logic puzzle video game genre generally played
+                on personal computers.
+                The game features a grid of clickable tiles, with hidden "mines"
+                (depicted as naval mines in the original game) scattered
+                throughout the board.
+                The objective is to clear the board without detonating any
+                mines, with
+                help from clues about the number of neighboring mines in each
+                field.
+            </p>
+            <p>
+                What I found interesting about this game is the way it connects to the 
+                <a href="https://en.wikipedia.org/wiki/Flood_fill">flood fill</a> algorithm. 
+                Whenever you click a cell, the maximum possible area is uncovered so that it makes sense
+                to play the game (you can see the numbers and do some reasoning instead of relying on pure luck).
+            </p>
 
-<body>
-    <nav>
-        <div class="topnav" id="myTopnav">
-            <a href="../index.html" class="active">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Projects
-                <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="../1_GameOfLife/index.html">Game of Life</a>
-                    <a href="../2_MineSweeper/index.html">Mine Sweeper</a>
-                    <a href="../4_TicTacToe/index.html">Tic Tac Toe (prompt)</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Other
-                <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="../3_CheckTheTime/index.html">Qué hora es?</a>
-                </div>
-            </div>
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">&#9776;</a>
-        </div>
-    </nav>
-    <main>
-        <h1>Minesweeper</h1>
-        <p>
-            Minesweeper is a logic puzzle video game genre generally played on personal computers. 
-            The game features a grid of clickable tiles, with hidden "mines" 
-            (depicted as naval mines in the original game) scattered throughout the board. 
-            The objective is to clear the board without detonating any mines, with 
-            help from clues about the number of neighboring mines in each field.
-        </p>
-        <p>
-            A game of Minesweeper begins when the player first selects a cell on a board. 
-            In some variants the first click is guaranteed to be safe, and some further guarantee 
-            that all adjacent cells are safe as well. During the game, the player uses 
-            information given from the opened cells to deduce further cells that are safe to open, 
-            iteratively gaining more information to solve the board. The player is also given the number 
-            of remaining mines in the board, known as the minecount, which is calculated as the total number 
-            of mines subtracted by the number of flagged cells.
-        </p>
-        
-        <p>
             <ul>
-                <li id="hl">Left Click: destroy a cell</li>
-                <li id="hl">Right Click: mark a cell</li>
+                <li>Left Click: Destroy a cell</li>
+                <li>Right Click: Mark a cell</li>
             </ul>
-        </p>
 
-        <div id="engine"></div>
+            <div id="engine"></div>
 
-        <button class="button" onclick="new_game()">Reset Board</button>
+            <button class="button" onclick="new_game()">Reset Board</button>
 
-        <p>
-            More info here:
+            <p>
+                More info here:
+            </p>
+
             <ul>
-                <li> <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)">Wikipedia Minesweeper</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)">Wikipedia Minesweeper</a></li>
                 <li> <a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/mines.html">Another implementation</a></li>
                 <li><a href="https://minesweepergame.com/minesweeper-cheats.php">Minesweeper Cheats</a></li>
                 <li><a href="https://dash.harvard.edu/bitstream/handle/1/14398552/BECERRA-SENIORTHESIS-2015.pdf">Algorithmic Approaches to Playing Minesweeper</a></li>
             </ul>
-        </p>
-    </main>
-</body>
+        </main>
+    </body>
 </html>

@@ -6,6 +6,8 @@ def get_html_raw(path):
     html = ''
     for line in f:
         html += line
+
+    f.close()
     return html
 
 def extraction(path, pos):
@@ -22,6 +24,7 @@ def extraction(path, pos):
             break
         idx += 1
 
+    f.close()
     return ext
 
 def parse_html_tag(path, tag):
@@ -40,7 +43,23 @@ def parse_html_tag(path, tag):
             end = idx + 1
             break
         idx += 1
+    f.close()
     return (start, end)
+
+def change_text(path, pos, new_text):
+    f = open(path, 'r')
+    lines = f.readlines()
+    f.close()
+
+    start, end = pos[0], pos[1]
+    
+    lines[start:end] = [new_text + '\n']
+    
+    f = open(path, 'w')
+    
+    f.writelines(lines)
+    f.close
+    
 
 class SitePage:
     def __init__(self, path):
@@ -58,9 +77,11 @@ class SitePage:
     def extract_nav(self):
         parsed_nav = parse_html_tag(self.index, '<nav>')
         return extraction(self.index, self.pnav)
+    
+    def change_nav(self):
+        curr_nav = self.extract_nav()
+        curr_nav += '\n' + 
 
 
 if __name__ == '__main__':
-    s = SitePage('./1_GameOfLife/')
-    #print(s.html)
-    print(s.extract_nav())
+    s = SitePage('./testing/')
