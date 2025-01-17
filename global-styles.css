@@ -205,3 +205,42 @@ blockquote {
   }
 }
 
+form {
+  display: inline-block;
+  padding: 1em;
+  border: 1.5px solid #000000;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+label {
+  display: inline-block;
+  min-width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  outline-style: solid;
+  outline-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+#last-visit{
+  background-color: var(--gray);
+  color: white;
+  padding: 1em;
+  margin: 0;
+}
