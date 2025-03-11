@@ -1,119 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta charset="UTF-8">
-		<title>Home</title>
-		<link rel="stylesheet" href="./global-styles.css">
-		<link rel="stylesheet" href="./animation.css">
+<html>
+<head>
+    <link rel="stylesheet" href="global_styles.css">
+    <title>Homepage</title>
+</head>
 
-		<script src="./js/main.js"></script>
-		<script src="./js/quote-picker.js"></script>
-	</head>
+<body>
+    <h1>Petru Răzvan Robu</h1>
+    <p><i>"Since we cannot know all that there is to be known about anything, 
+        we ought to know a little about everything."</i>- Blaise Pascal</p>
 
-	<body>
-		<div class="topnav" id="myTopnav">
-			<nav>
-				<a href="./index.html" class="active">Home</a>
-				<div class="dropdown">
-					<button class="dropbtn">Projects
-						<i class="fa fa-caret-down"></i>
-					</button>
-					<div class="dropdown-content">
-						<a href="./1_GameOfLife/index.html">Game of Life</a>
-						<a href="./2_MineSweeper/index.html">Mine Sweeper</a>
-						<a href="./4_TicTacToe/index.html">Tic Tac Toe (prompt)</a>
-					</div>
-				</div>
-				<div class="dropdown">
-					<button class="dropbtn">Other
-						<i class="fa fa-caret-down"></i>
-					</button>
-					<div class="dropdown-content">
-						<a href="./3_CheckTheTime/index.html">Qué hora es?</a>
-					</div>
-				</div>
-				<a href="#about">About</a>
-				<a href="javascript:void(0);" class="icon"
-					onclick="responsiveNav()">&#9776;</a>
-			</nav>
-		</div>
+    <hr>
+    <div class="text-section">
+        <h3>
+            Welcome!
+        </h3>
+        <p>
+            This is my personal website. Here you can find a
+            description of my projects, my interests and passions. On this website you
+            will find some of my programming projects and ocassional articles on
+            different topics.
+            <br>
+            Feel free to contact me at the following details, if you wish to get in touch: 
+            <a href="mailto:petru.robu@hotmail.com">petru.robu@hotmail.com</a>.
+            <br>
+            You can also find me on  
+            <a target="_blank" href="https://www.youtube.com/@petru-robu64">YouTube</a> and
+            on <a target="_blank" href="https://github.com/petru-robu">GitHub</a>.
+        </p>
+    </div>
+    <hr>
+    
+    <div class="text-section">
+        <h3>Projects:</h3>
+        <p>
+            Interactive javascript projects (you can run them in 
+            your browser by clicking the link below):<br>
 
-		<header>
-			<div class="textAnimation">
-				<span class="key">P</span>
-				<span class="key">E</span>
-				<span class="key">T</span>
-				<span class="key">R</span>
-				<span class="key">U</span>
-			</div>
-		</header>
+            <ul>
+                <li>
+                    <a href="mine_sweeper/index.html">Minesweeper</a><br>
+                </li>
+                
+                <li>
+                    <a href="game_of_life/index.html">Game of Life</a>
+                </li>
+            </ul>
+            
+            Other programming projects:<br>
+            
+            <ul>
+                <li>
+                    <a href="https://github.com/petru-robu/SudokuSolver" target="_blank">Sudoku Solver (c++/sfml)</a>
+                </li>
 
-		<main>
-			<h3>
-				This is my personal website. Here you can see some of my projects and
-				have a glimpse of my interests and passions.
-			</h3>
+                <li>
+                    <a href="https://github.com/petru-robu/Boids" target="_blank">Boids Simultor (c++/sfml)</a> 
+                    Note: You can also view a demo on youtube here:
+                    <a href="https://www.youtube.com/watch?v=A0u6Mn-_3jA&t" target="_blank">Boids</a>
 
-			<p>
-				Here is my information if you'd wish to
-				contact me:
-				<a href="https://github.com/petru-robu">GitHub Profile</a> |
-				<a href="https://www.youtube.com/@petru-robu64">Youtube Channel</a> |
-				Email: petru.robu@hotmail.com |
-				You can also send me an email using the form below.
+                </li>
 
-			</p>
+                <li>
+                    <a href="https://github.com/petru-robu/Snake" target="_blank">Snake Game (python/pygame)</a>
+                    Note: The music in the background is music I made a while ago. You can view a demo 
+                    <a href="https://www.youtube.com/watch?v=3bH3ytPieXU&t" target="_blank">here</a>.
+                </li>
+            </ul>
 
-			<div class="tile-container">
-				<div class="tile" onclick="location.href='1_GameOfLife/index.html'">
-					<h3>Game of Life</h3>
-					<p> Conway's Game of Life is a cellular automaton that is played 
-						on a 2D square grid. Each square (or "cell") on the grid can be either 
-						alive or dead, and they evolve according to some rules. </p>
-				</div>
+        </p>
+    </div>
 
-				<div class="tile" onclick="location.href='2_MineSweeper/index.html'">
-					<h3>Minesweeper</h3>
-					<p> Minesweeper is a logic puzzle video game genre generally 
-						played on personal computers. The game features a grid of clickable tiles,
-						with hidden "mines" scattered throughout the board.</p>
-				</div>
-			</div>
+    <hr>
 
-			<h3>
-				Here is a random quote picker. It randomly picks 5
-				 quotes from a given list (refresh page to get new quotes):
-			</h3>
+    <div class="text-section">
+        <h3>Other:</h3>
+        <p>In my free time, I enjoy listening and playing music, so here are some reviews
+            or lyrics of music I like: <br>
+            <ul>
+                <li><a href="music_reviews/index.html">Music Reviews</a></li>
+            </ul>
+        </p>
 
-			<div id="quotesContainer"></div>
-			
-			<h3>
-				Contact me using this form: 
-			</h3>
-			
-			<form id="my-form">
-				<p>
-					<label for="name">Name:</label>
-					<input type="text" id="name" name="user_name">
-				</p>
-				<p>
-					<label for="mail">Email:</label>
-					<input type="text" id="mail" name="user_email">
-				</p>
-				<p>
-					<label for="msg">Message:</label>
-					<textarea id="msg" name="user_message"></textarea>
-				</p>
-					<p class="button">
-					<button type="submit">Send!</button>
-				</p>
-			</form>
-		</main>
+    </div>
+    
+</body>
 
-		<footer>
-			<p id="last-visit"></p>
-		</footer>
-	</body>
 
 </html>

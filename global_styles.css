@@ -1,0 +1,16 @@
+body{
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+
+    font-size: 1.1em;
+}
+
+ul{
+    padding-left: 1em;
+}
+
+.text-section{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
