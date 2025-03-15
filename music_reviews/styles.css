@@ -23,4 +23,23 @@
 .break {
     flex-basis: 100%;
     height: 0;
-  }
+}
+
+.container-review{
+    display: flex;
+    flex-direction: row;
+    gap:2em;
+}
+
+.big-album img{
+    max-width: 100%;
+    height: auto;
+    width: 400px; 
+}
+
+@media (max-width: 768px) {
+    .container-review {
+        flex-direction: column;
+        text-align: center;
+    }
+}
