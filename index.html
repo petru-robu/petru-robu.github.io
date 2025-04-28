@@ -8,6 +8,19 @@
 <body>
     <h1>Petru Răzvan Robu</h1>
 
+    <p id="creation-date"></p>
+    <p id="date"></p>
+
+    <script>
+        const creation_date = new Date("2024-11-05");
+        const today = new Date();
+
+        const diffInMs = today - creation_date;
+        const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
+        
+        document.getElementById('date').textContent = "There have been " + diffInDays + " days since site creation.";
+    </script>
+
     <hr>
     <div class="text-section">
         <div class="intro-wrapper">
@@ -114,9 +127,10 @@
             </ul>
         </p>
 
-        <p>Some articles: </p>
+        <p>Some articles / other stuff: </p>
         <ul>
             <li><a href="diypedal/index.html">Building a DIY Guitar MIDI Pedal using arduino.</a></li>
+            <li><a href="https://www.youtube.com/watch?v=AcKVqgZ0JJc" target="_blank">Pictures taken with Canon EOS hiking.</a></li>
         </ul>
 
     </div>

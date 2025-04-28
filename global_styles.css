@@ -4,7 +4,12 @@ body{
     padding-right: 4em;
 
     font-size: 1.1em;
+    background-color: rgb(210, 242, 253);
+}
 
+hr{
+    border: 0;
+    border-top: 1.5px solid #5e5e5e;
 }
 
 ul{
