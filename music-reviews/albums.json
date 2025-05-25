@@ -1,0 +1,142 @@
+[
+  {
+    "album": "Abbey Road",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1969,
+    "rating": 0.0
+  },
+  {
+    "album": "Sgt. Pepper's Lonely Hearts Club Band",
+    "artist": "The Beatles",
+    "genre": "Psychedelic Rock",
+    "year": 1967,
+    "rating": 0.0
+  },
+  {
+    "album": "Revolver",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1966,
+    "rating": 0.0
+  },
+  {
+    "album": "Rubber Soul",
+    "artist": "The Beatles",
+    "genre": "Folk Rock",
+    "year": 1965,
+    "rating": 0.0
+  },
+  {
+    "album": "The Beatles (White Album)",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968,
+    "rating": 0.0
+  },
+  {
+    "album": "Help!",
+    "artist": "The Beatles",
+    "genre": "Pop Rock",
+    "year": 1965,
+    "rating": 0.0
+  },
+  {
+    "album": "Let It Be",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1970,
+    "rating": 0.0
+  },
+  {
+    "album": "A Hard Day's Night",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1964,
+    "rating": 0.0
+  },
+  {
+    "album": "Beatles for Sale",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1964,
+    "rating": 0.0
+  },
+  {
+    "album": "Magical Mystery Tour",
+    "artist": "The Beatles",
+    "genre": "Psychedelic Rock",
+    "year": 1967,
+    "rating": 0.0
+  },
+  {
+    "album": "Yellow Submarine",
+    "artist": "The Beatles",
+    "genre": "Soundtrack",
+    "year": 1969,
+    "rating": 0.0
+  },
+  {
+    "album": "Argus",
+    "artist": "Wishbone Ash",
+    "genre": "Progressive Rock",
+    "year": 1972,
+    "rating": 0.0
+  },
+  {
+    "album": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1973,
+    "rating": 0.0
+  },
+  {
+    "album": "The Wall",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1979,
+    "rating": 0.0
+  },
+  {
+    "album": "The Division Bell",
+    "artist": "Pink Floyd",
+    "genre": "Progressive Rock",
+    "year": 1994,
+    "rating": 0.0
+  },
+  {
+    "album": "Kind of Blue",
+    "artist": "Miles Davis",
+    "genre": "Jazz",
+    "year": 1959,
+    "rating": 0.0
+  },
+  {
+    "album": "Blue Train",
+    "artist": "John Coltrane",
+    "genre": "Jazz",
+    "year": 1957,
+    "rating": 0.0
+  },
+  {
+    "album": "Saxophone Colossus",
+    "artist": "Sonny Rollins",
+    "genre": "Jazz",
+    "year": 1956,
+    "rating": 0.0
+  },
+  {
+    "album": "Aqualung",
+    "artist": "Jethro Tull",
+    "genre": "Progressive Rock",
+    "year": 1971,
+    "rating": 0.0
+  },
+  {
+    "album": "Selling England by the Pound",
+    "artist": "Genesis",
+    "genre": "Progressive Rock",
+    "year": 1973,
+    "rating": 0.0
+  }
+]

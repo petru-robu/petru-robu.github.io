@@ -1,0 +1,106 @@
+[
+  {
+    "name": "One Flew Over the Cuckoo's Nest",
+    "director": "Milos Forman",
+    "year": 1975,
+    "notes": "A powerful drama about rebellion and institutional control.",
+    "rating": 9.9,
+    "link": "https://www.imdb.com/title/tt0073486/"
+  },
+  {
+    "name": "Forrest Gump",
+    "director": "Robert Zemeckis",
+    "year": 1994,
+    "notes": "A touching tale of a simple man living an extraordinary life.",
+    "rating": 9.3,
+    "link": "https://www.imdb.com/title/tt0109830/"
+  },
+  {
+    "name": "The Shawshank Redemption",
+    "director": "Frank Darabont",
+    "year": 1994,
+    "notes": "An inspiring story of hope and resilience behind bars.",
+    "rating": 9.2,
+    "link": "https://www.imdb.com/title/tt0111161/"
+  },
+  {
+    "name": "Fight Club",
+    "director": "David Fincher",
+    "year": 1999,
+    "notes": "A dark, stylish critique of consumerism and identity.",
+    "rating": 8.6,
+    "link": "https://www.imdb.com/title/tt0137523/"
+  },
+  {
+    "name": "Interstellar",
+    "director": "Christopher Nolan",
+    "year": 2014,
+    "notes": "A visually stunning and emotional sci-fi epic.",
+    "rating": 8.5,
+    "link": "https://www.imdb.com/title/tt0816692/"
+  },
+  {
+    "name": "Se7en",
+    "director": "David Fincher",
+    "year": 1995,
+    "notes": "A gritty, suspenseful crime thriller with a haunting ending.",
+    "rating": 8.7,
+    "link": "https://www.imdb.com/title/tt0114369/"
+  },
+  {
+    "name": "City of God",
+    "director": "Fernando Meirelles, Kátia Lund",
+    "year": 2002,
+    "notes": "A raw and gripping portrayal of life in the slums of Rio.",
+    "rating": 7.4,
+    "link": "https://www.imdb.com/title/tt0317248/"
+  },
+  {
+    "name": "The Green Mile",
+    "director": "Frank Darabont",
+    "year": 1999,
+    "notes": "A touching supernatural tale set on death row.",
+    "rating": 8.1,
+    "link": "https://www.imdb.com/title/tt0120689/"
+  },
+  {
+    "name": "Whiplash",
+    "director": "Damien Chazelle",
+    "year": 2014,
+    "notes": "An intense story of ambition, discipline, and obsession.",
+    "rating": 9.4,
+    "link": "https://www.imdb.com/title/tt2582802/"
+  },
+  {
+    "name": "The Usual Suspects",
+    "director": "Bryan Singer",
+    "year": 1995,
+    "notes": "A masterfully told mystery with a legendary twist.",
+    "rating": 8.1,
+    "link": "https://www.imdb.com/title/tt0114814/"
+  },
+  {
+    "name": "Memento",
+    "director": "Christopher Nolan",
+    "year": 2000,
+    "notes": "A psychological thriller told in reverse chronology.",
+    "rating": 7.6,
+    "link": "https://www.imdb.com/title/tt0209144/"
+  },
+  {
+    "name": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "notes": "A mind-bending thriller about dreams within dreams.",
+    "rating": 7.8,
+    "link": "https://www.imdb.com/title/tt1375666/"
+  },
+  {
+    "name": "The Matrix",
+    "director": "The Wachowskis",
+    "year": 1999,
+    "notes": "A sci-fi classic exploring reality and simulation.",
+    "rating": 8.2,
+    "link": "https://www.imdb.com/title/tt0133093/"
+  }
+]
