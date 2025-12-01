@@ -1,15 +1,17 @@
-/* Background placed on html so the gradient covers the full viewport */
+/* DARK MODE */
+
+/* Background placed on html */
 html {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgb(210, 225, 253) 0%,
-    rgb(230, 237, 252) 50%,
-    rgb(240, 245, 255) 100%
+    rgb(32, 35, 42) 0%,
+    rgb(22, 25, 32) 50%,
+    rgb(15, 18, 25) 100%
   );
-  background-repeat: no-repeat;     /* prevent tiling */
-  background-attachment: fixed;     /* extend gradient beyond viewport */
-  background-size: 100% 100%;       /* stretch gradient to full page */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 /* Main content column */
@@ -25,33 +27,35 @@ body {
   padding-left: 4em;
   padding-right: 4em;
 
-  color: #1d1d1d;
-  background: transparent; /* allow gradient to show */
-  min-height: 100vh;
+  color: #e6e6e6;
+  background: transparent;
   box-sizing: border-box;
 }
 
 /* Headings */
-h1, h3 {
+h1,
+h3 {
   letter-spacing: 0.5px;
 }
 
 h1 {
   font-size: 2.4em;
   margin-bottom: 0.2em;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: #fafafa;
 }
 
 h3 {
   margin-bottom: 0.5em;
-  border-left: 4px solid #3f6fcf;
+  border-left: 4px solid #6fa8ff; /* cool blue accent */
   padding-left: 0.5em;
+  color: #f0f0f0;
 }
 
 /* Lines */
 hr {
   border: 0;
-  border-top: 1.5px solid #5e5e5e;
+  border-top: 1.5px solid #6d6d6d;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -73,11 +77,12 @@ li {
   padding-left: 1.3em;
   padding-right: 1.3em;
 
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(40, 40, 45, 0.75);
   border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
 
   margin-bottom: 2em;
+  color: #eaeaea;
 }
 
 /* Intro layout */
@@ -91,26 +96,31 @@ li {
 .intro img,
 #season-image {
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.55);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 #season-image:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
 }
 
 /* Links */
 a {
-  color: #2d56a3;
+  color: #8bb7ff;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.2s, border-bottom 0.2s;
 }
 
 a:hover {
-  color: #1a3e7c;
-  border-bottom: 1px solid #1a3e7c;
+  color: #bcd6ff;
+  border-bottom: 1px solid #bcd6ff;
+}
+
+.title {
+  text-align: center;
+  color: #f5f5f5;
 }
 
 /* Mobile adjustments */

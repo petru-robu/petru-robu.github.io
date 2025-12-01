@@ -1,13 +1,27 @@
 table {
   width: 100%;
   border-collapse: collapse;
+  background: rgba(35, 37, 45, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 th,
 td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #444;
   padding: 10px;
   text-align: left;
+  color: #e6e6e6;
+}
+
+th {
+  background: rgba(50, 52, 60, 0.85);
+  font-weight: bold;
+  color: #fafafa;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }
 
 th:nth-child(1),
@@ -25,11 +39,13 @@ td:nth-child(3) {
   width: 25%;
 }
 
+/* Links */
 a {
-  color: #0066cc;
+  color: #8bb7ff;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #bcd6ff;
 }

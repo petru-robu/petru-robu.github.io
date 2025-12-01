@@ -1,12 +1,12 @@
 .pg
 {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   padding: 1em;
   
   height: auto;
-  border: 2px solid rgb(0, 0, 0);
-  filter: grayscale(1) contrast(0) brightness(0);
+  border: 2px solid rgb(113, 113, 113);
+  filter: grayscale(1) contrast(1) brightness(1);
 }
 
 .pg:hover
@@ -27,10 +27,10 @@
 
 .button
 {
-  background-color:#ffffff;
+  background-color:#000000;
   font-family: sans-serif;
-  color: rgb(0, 0, 0);
-  border: 2px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .button:hover 

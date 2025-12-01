@@ -1,111 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Game of Life</title>
-        
-        <link rel="stylesheet" type="text/css" href="./styles.css">
-        <link rel="stylesheet" type="text/css" href="../global_styles.css">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Game of Life</title>
 
-        <script src="../js/p5.js"></script>
-        <script src="./js/game.js"></script>
-    </head>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" type="text/css" href="../global_styles.css" />
 
-    <body>
-        <h1>Game of Life</h1>
-        <p>
-            The Game of Life, also known as Conway's Game of Life or simply
-            Life, is a cellular automaton
-            devised by the British mathematician <a target="_blank" href="https://en.wikipedia.org/wiki/John_Horton_Conway">John Horton Conway</a> in 1970.
-            One interacts with the Game of Life by creating an initial
-            configuration and observing how it evolves.
-            It is <a target="_blank" href="https://en.wikipedia.org/wiki/Turing_completeness">Turing complete</a> and can simulate a universal constructor
-            or any other Turing machine.
-        </p>
+    <script src="../js/p5.js"></script>
+    <script src="./js/game.js"></script>
+  </head>
 
-        <p>
-            The universe of the Game of Life is an infinite, two-dimensional
-            orthogonal
-            grid of square cells, each of which is in one of two possible
-            states,
-            live or dead (or populated and unpopulated, respectively).
-            Every cell interacts with its eight neighbors, which are the
-            cells that are horizontally,
-            vertically, or diagonally adjacent. At each step in time, the
-            following transitions occur:
-        </p>
-            
-        <ul>
-            <li>Any live cell with fewer than two live
-                neighbours dies, as if by underpopulation.</li>
-            <li>Any live cell with two or three live neighbours
-                lives on to the next generation.</li>
-            <li>Any live cell with more than three live
-                neighbours dies, as if by overpopulation.</li>
-            <li>Any dead cell with exactly three live neighbours
-                becomes a live cell, as if by reproduction.</li>
-        </ul>
+  <body>
+    <h1>Game of Life</h1>
+    <p>
+      The Game of Life, also known as Conway's Game of Life or simply Life, is a
+      cellular automaton devised by the British mathematician
+      <a target="_blank" href="https://en.wikipedia.org/wiki/John_Horton_Conway"
+        >John Horton Conway</a
+      >
+      in 1970. One interacts with the Game of Life by creating an initial
+      configuration and observing how it evolves. It is
+      <a
+        target="_blank"
+        href="https://en.wikipedia.org/wiki/Turing_completeness"
+        >Turing complete</a
+      >
+      and can simulate a universal constructor or any other Turing machine.
+    </p>
 
-        <p>
-            Click on the cells to activate/deactivate them.<br>
-            To load a model, press one of these buttons:
-        </p>
+    <p>
+      The universe of the Game of Life is an infinite, two-dimensional
+      orthogonal grid of square cells, each of which is in one of two possible
+      states, live or dead (or populated and unpopulated, respectively). Every
+      cell interacts with its eight neighbors, which are the cells that are
+      horizontally, vertically, or diagonally adjacent. At each step in time,
+      the following transitions occur:
+    </p>
 
-        <div class="pattern-col">
-            <img class="pg" src="./img/cap.png" alt="imagine-lipsa" onclick="p1()">
-            <img class="pg" src="./img/anvil.png" alt="imagine-lipsa" onclick="p2()">
-            <img class="pg" src="./img/average.png" alt="imagine-lipsa" onclick="p3()">
-            <img class="pg" src="./img/beacon.png" alt="imagine-lipsa" onclick="p4()">
-            <img class="pg" src="./img/bipolebridgepseudobarberpole.png" alt="imagine-lipsa" onclick="p5()">
-            <img class="pg" src="./img/koksgalaxy.png" alt="imagine-lipsa" onclick="p6()">
-            <img class="pg" src="./img/roteightor.png" alt="imagine-lipsa" onclick="p24()">
-            <img class="pg" src="./img/byflops.png" alt="imagine-lipsa"
-                style="width:32px; height:32px;" onclick="p8()">
-            <img class="pg" src="./img/butterfly.png" alt="imagine-lipsa" onclick="p9()">
-            <img class="pg" src="./img/cuphook.png" alt="imagine-lipsa" onclick="p10()">
-            <img class="pg" src="./img/cross2.png" alt="imagine-lipsa" onclick="p11()">
-        </div>
+    <ul>
+      <li>
+        Any live cell with fewer than two live neighbours dies, as if by
+        underpopulation.
+      </li>
+      <li>
+        Any live cell with two or three live neighbours lives on to the next
+        generation.
+      </li>
+      <li>
+        Any live cell with more than three live neighbours dies, as if by
+        overpopulation.
+      </li>
+      <li>
+        Any dead cell with exactly three live neighbours becomes a live cell, as
+        if by reproduction.
+      </li>
+    </ul>
 
-        <br>
+    <p>
+      Click on the cells to activate/deactivate them.<br />
+      To load a model, press one of these buttons:
+    </p>
 
-        <div class="pattern-col">
-            <img class="pg" src="./img/weekender.png" alt="imagine-lipsa" onclick="p12()">
-            <img class="pg" src="./img/toadflipper.png" alt="imagine-lipsa" onclick="p13()">
-            <img class="pg" src="./img/shipinabottle.png" alt="imagine-lipsa" onclick="p14()">
-            <img class="pg" src="./img/starwithblocks.png" alt="imagine-lipsa" onclick="p15()">
-            <img class="pg" src="./img/tumbler.png" alt="imagine-lipsa" onclick="p16()">
-            <img class="pg" src="./img/orion2.png" alt="imagine-lipsa" onclick="p17()">
-            <img class="pg" src="./img/spider.png" alt="imagine-lipsa" onclick="p18()">
-            <img class="pg" src="./img/twopulsarquadrants.png" alt="imagine-lipsa" onclick="p19()">
-            <img class="pg" src="./img/lwsstagalong.png" alt="imagine-lipsa" onclick="p20()">
-            <img class="pg" src="./img/nonmonotonicspaceship1.png" alt="imagine-lipsa" onclick="p21()">
-            <img class="pg" src="./img/negentropy.png" alt="imagine-lipsa" onclick="p22()">
-        </div>
+    <div class="pattern-col">
+      <img class="pg" src="./img/cap.png" alt="imagine-lipsa" onclick="p1()" />
+      <img
+        class="pg"
+        src="./img/anvil.png"
+        alt="imagine-lipsa"
+        onclick="p2()"
+      />
+      <img
+        class="pg"
+        src="./img/average.png"
+        alt="imagine-lipsa"
+        onclick="p3()"
+      />
+      <img
+        class="pg"
+        src="./img/beacon.png"
+        alt="imagine-lipsa"
+        onclick="p4()"
+      />
+      <img
+        class="pg"
+        src="./img/bipolebridgepseudobarberpole.png"
+        alt="imagine-lipsa"
+        onclick="p5()"
+      />
+      <img
+        class="pg"
+        src="./img/koksgalaxy.png"
+        alt="imagine-lipsa"
+        onclick="p6()"
+      />
+      <img
+        class="pg"
+        src="./img/roteightor.png"
+        alt="imagine-lipsa"
+        onclick="p24()"
+      />
+      <img
+        class="pg"
+        src="./img/byflops.png"
+        alt="imagine-lipsa"
+        onclick="p8()"
+      />
+      <img
+        class="pg"
+        src="./img/butterfly.png"
+        alt="imagine-lipsa"
+        onclick="p9()"
+      />
+      <img
+        class="pg"
+        src="./img/cuphook.png"
+        alt="imagine-lipsa"
+        onclick="p10()"
+      />
+      <img
+        class="pg"
+        src="./img/cross2.png"
+        alt="imagine-lipsa"
+        onclick="p11()"
+      />
+    </div>
 
-        <div id="engine"></div>
+    <br />
 
-        <p>
-            Control the program from here:
-        </p>
+    <div class="pattern-col">
+      <img
+        class="pg"
+        src="./img/weekender.png"
+        alt="imagine-lipsa"
+        onclick="p12()"
+      />
+      <img
+        class="pg"
+        src="./img/toadflipper.png"
+        alt="imagine-lipsa"
+        onclick="p13()"
+      />
+      <img
+        class="pg"
+        src="./img/shipinabottle.png"
+        alt="imagine-lipsa"
+        onclick="p14()"
+      />
+      <img
+        class="pg"
+        src="./img/starwithblocks.png"
+        alt="imagine-lipsa"
+        onclick="p15()"
+      />
+      <img
+        class="pg"
+        src="./img/tumbler.png"
+        alt="imagine-lipsa"
+        onclick="p16()"
+      />
+      <img
+        class="pg"
+        src="./img/orion2.png"
+        alt="imagine-lipsa"
+        onclick="p17()"
+      />
+      <img
+        class="pg"
+        src="./img/spider.png"
+        alt="imagine-lipsa"
+        onclick="p18()"
+      />
+      <img
+        class="pg"
+        src="./img/twopulsarquadrants.png"
+        alt="imagine-lipsa"
+        onclick="p19()"
+      />
+      <img
+        class="pg"
+        src="./img/lwsstagalong.png"
+        alt="imagine-lipsa"
+        onclick="p20()"
+      />
+      <img
+        class="pg"
+        src="./img/nonmonotonicspaceship1.png"
+        alt="imagine-lipsa"
+        onclick="p21()"
+      />
+      <img
+        class="pg"
+        src="./img/negentropy.png"
+        alt="imagine-lipsa"
+        onclick="p22()"
+      />
+    </div>
 
-        <div class="butoane">
-            <button class="button" onclick="startGame()">Start</button>
-            <button class="button" onclick="stopGame()">Stop</button>
-            <button class="button" onclick="clear_grid()">Clear</button>
-            <button class="button" onclick="random_set()">Rand</button>
-        </div>
+    <div id="engine"></div>
 
-        <p>
-            More information:
-        </p>
+    <p>Control the program from here:</p>
 
-        <ul>
-            <li> <a target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia
-                    Conway's Game Of Life</a></li>
-            <li> <a target="_blank" href="https://golly.sourceforge.io/">Another GoL
-                    simulator</a> </li>
-            <li> <a target="_blank" href="https://conwaylife.com/wiki/">LifeWiki</a></li>
-        </ul>
-    </body>
+    <div class="butoane">
+      <button class="button" onclick="startGame()">Start</button>
+      <button class="button" onclick="stopGame()">Stop</button>
+      <button class="button" onclick="clear_grid()">Clear</button>
+      <button class="button" onclick="random_set()">Rand</button>
+    </div>
+
+    <p>More information:</p>
+
+    <ul>
+      <li>
+        <a
+          target="_blank"
+          href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+          >Wikipedia Conway's Game Of Life</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="https://golly.sourceforge.io/"
+          >Another GoL simulator</a
+        >
+      </li>
+      <li>
+        <a target="_blank" href="https://conwaylife.com/wiki/">LifeWiki</a>
+      </li>
+    </ul>
+  </body>
+
+  <br \>
+  <br \>
 </html>
