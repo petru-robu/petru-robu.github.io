@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
     <title>Movies</title>
-    <link rel="stylesheet" type="text/css" href="../global_styles.css">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
 
-    <script src="reviews.js"></script>
-</head>
+    <link rel="stylesheet" type="text/css" href="../global_styles.css" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
 
-<body>
-    <h1>
-        Movie Reviews
-    </h1>
-    <p id="quote">
-        <i>"Movies touch our hearts and awaken our vision."</i>
-        - <a href="https://ro.wikipedia.org/wiki/Martin_Scorsese" target="_blank">Martin Scorsese</a> <br><br>
-        Here are some of the movies I watched and enjoyed.
-        Click on sort to sort albums by rating, name and other.
-    </p>
-    <hr>
+    <script src="reviews.js" defer></script>
+  </head>
 
-    <table>
-    <thead>
-      <tr>
-        <th>Movie (<a href="#" id="sort-name">sort</a>)</th>
-        <th>Year (<a href="#" id="sort-year">sort</a>)</th>
-        <th>Rating (<a href="#" id="sort-rating">sort</a>)</th>
-      </tr>
-    </thead>
-    <tbody id="movie-list"></tbody>
-    </table>
+  <body>
+    <header>
+      <h1>Movie Reviews</h1>
+      <p id="quote">
+        Here are some of the movies I watched and enjoyed.  
+        Click on “sort” to sort entries by rating, name, or year.
+      </p>
+    </header>
 
-    
-    
-</body>
+    <hr />
 
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Movie
+              (<a href="#" id="sort-name">sort</a>)
+            </th>
+            <th>
+              Year
+              (<a href="#" id="sort-year">sort</a>)
+            </th>
+            <th>
+              Rating
+              (<a href="#" id="sort-rating">sort</a>)
+            </th>
+          </tr>
+        </thead>
+
+        <tbody id="movie-list">
+        </tbody>
+      </table>
+    </section>
+  </body>
 </html>

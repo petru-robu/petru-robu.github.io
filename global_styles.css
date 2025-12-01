@@ -1,42 +1,138 @@
-body{
-    font-family: 'Arial', sans-serif;
-
-    padding-top: 2em;
-    padding-left: 4em;
-    padding-right: 4em;
-
-    font-size: 1.1em;
-    background-color: rgb(210, 225, 253);
+/* Background placed on html so the gradient covers the full viewport */
+html {
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgb(210, 225, 253) 0%,
+    rgb(230, 237, 252) 50%,
+    rgb(240, 245, 255) 100%
+  );
+  background-repeat: no-repeat;     /* prevent tiling */
+  background-attachment: fixed;     /* extend gradient beyond viewport */
+  background-size: 100% 100%;       /* stretch gradient to full page */
 }
 
-hr{
-    border: 0;
-    border-top: 1.5px solid #5e5e5e;
+/* Main content column */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 1.1em;
+
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding-top: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+
+  color: #1d1d1d;
+  background: transparent; /* allow gradient to show */
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-ul{
-    padding-left: 1em;
+/* Headings */
+h1, h3 {
+  letter-spacing: 0.5px;
 }
 
-.text-section{
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 0.2em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
 }
 
-.intro-wrapper{
-    display: flex;
-    flex-direction: row;
+h3 {
+  margin-bottom: 0.5em;
+  border-left: 4px solid #3f6fcf;
+  padding-left: 0.5em;
 }
 
+/* Lines */
+hr {
+  border: 0;
+  border-top: 1.5px solid #5e5e5e;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.3em;
+  line-height: 1.5em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+/* Sections */
+.text-section {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+  margin-bottom: 2em;
+}
+
+/* Intro layout */
+.intro-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+}
+
+.intro img,
+#season-image {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#season-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Links */
+a {
+  color: #2d56a3;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+a:hover {
+  color: #1a3e7c;
+  border-bottom: 1px solid #1a3e7c;
+}
+
+/* Mobile adjustments */
 @media only screen and (max-width: 600px) {
-    body {
-        padding-top: 0.5em;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-
-    .intro-wrapper{
-        display: flex;
-        flex-direction: column;
-    }
+  body {
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
+
+  .intro-wrapper {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  #season-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .text-section {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

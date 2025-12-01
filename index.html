@@ -1,147 +1,196 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="./global_styles.css">
+  <head>
+    <link rel="stylesheet" href="./global_styles.css" />
     <title>Homepage</title>
-</head>
+  </head>
 
-<body>
-    <h1>Petru Răzvan Robu</h1>
+  <body>
+    <h1>Petru Razvan Robu</h1>
 
     <p id="creation-date"></p>
     <p id="date"></p>
 
-    <script>
-        const creation_date = new Date("2024-11-05");
-        const today = new Date();
+    <div class="text-section">
+      <div class="intro-wrapper">
+        <div class="intro">
+          <h3>Welcome!</h3>
+          <p>
+            This is my personal website. On this website you will find some of
+            my programming projects and occasional articles on different topics.
+          </p>
+          <p>
+            Feel free to contact me at the following details, if you wish to get
+            in touch:
+            <a href="mailto:petru.robu@hotmail.com">petru.robu@hotmail.com</a>.
+          </p>
+          <p>
+            You can also find me on
+            <a target="_blank" href="https://www.youtube.com/@petru-robu64"
+              >YouTube</a
+            >
+            and on
+            <a target="_blank" href="https://github.com/petru-robu">GitHub</a>.
+          </p>
+        </div>
 
-        const diffInMs = today - creation_date;
-        const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
-        
-        document.getElementById('date').textContent = "There have been " + diffInDays + " days since site creation.";
+        <img id="season-image" width="200" height="200" />
+      </div>
+    </div>
+
+    <script>
+      const month = new Date().getMonth() + 1; // 1–12
+      const isWinter = month === 12 || month <= 2;
+      const imageSrc = isWinter ? "me-winter.png" : "me-summer.png";
+      document.getElementById("season-image").src = imageSrc;
+
+      const creation_date = new Date("2024-11-05");
+      const today = new Date();
+      const diffInMs = today - creation_date;
+      const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
+
+      document.getElementById("date").textContent =
+        "There have been " + diffInDays + " days since site creation.";
     </script>
 
-    <hr>
     <div class="text-section">
-        <div class="intro-wrapper">
-
-        <div class="intro">
-        <h3>
-            Welcome!
-        </h3>
-        <p>
-            This is my personal website. Here you can find a
-            description of my projects, my interests and passions. On this website you
-            will find some of my programming projects and occasional articles on
-            different topics.
-            <br><br>
-            Feel free to contact me at the following details, if you wish to get in touch: 
-            <a href="mailto:petru.robu@hotmail.com">petru.robu@hotmail.com</a>.
-            <br><br>
-            You can also find me on  
-            <a target="_blank" href="https://www.youtube.com/@petru-robu64">YouTube</a> and
-            on <a target="_blank" href="https://github.com/petru-robu">GitHub</a>.
-        </p>
-        </div>
-
-        <!--
-        <img src="me-summer.png" width="200" height="200">
-
-        -->
-        <img src="me-summer.png" width="200" height="200">
-
-    
-
-        </div>
-        
-    </div>
-    <hr>
-    
-    <div class="text-section">
-        <h3>Projects:</h3>
-        <p>
-            Interactive javascript projects (you can run them in 
-            your browser by clicking the link below):<br>
-
-            <ul>
-                <li>
-                    <a href="mine_sweeper/index.html">Minesweeper</a><br>
-                </li>
-                
-                <li>
-                    <a href="game_of_life/index.html">Game of Life</a>
-                </li>
-            </ul>
-            
-            Programming projects:<br>
-            
-            <ul>
-                <li>
-                    <a href="https://github.com/petru-robu/Mandelbrot-visualizer" target="_blank">Mandelbrot visualizer (Python)</a>, a Mandelbrot
-                    set explorer that supports zooming in and out, smooth coloring, history and color palletes.
-                </li>
-
-
-                <li>
-                    <a href="https://github.com/petru-robu/GoGame" target="_blank">Go Game (c++/sfml)</a>, implementation
-                    of the traditional chinese game, Go. The music in the background is music I made. This project is cross-platform,
-                    as it uses github CI. For more details read readme.
-                </li>
-
-                <li>
-                    <a href="https://github.com/petru-robu/SudokuSolver" target="_blank">Sudoku Solver (c++/sfml)</a>, 
-                    implementation of a sudoku game. The application allows the input of a sudoku and solves it using backtracking.
-                </li>
-
-                <li>
-                    <a href="https://github.com/petru-robu/Boids" target="_blank">Boids Simultor (c++/sfml)</a> 
-                        , flocking simulator. This is an application that simulates the behavior of animals such as birds and fish in nature.
-                        Read more <a href="https://en.wikipedia.org/wiki/Boids" target="_blank">here</a>.
-                        Note: You can also view a demo on youtube here:
-                        <a href="https://www.youtube.com/watch?v=A0u6Mn-_3jA&t" target="_blank">Boids</a>
-                    
-                </li>
-
-                <li>
-                    <a href="https://github.com/petru-robu/Snake" target="_blank">Snake Game (python/pygame)</a>
-                    , simple snake game in python.
-                    Note: The music in the background is music I made a while ago. You can view a demo 
-                    <a href="https://www.youtube.com/watch?v=3bH3ytPieXU&t" target="_blank">here</a>.
-                </li>
-            </ul>
-
-            Contributions:<br>
-            <ul>
-                <li>
-                    <a href="https://github.com/voaidesr/QR" target="_blank">QR Code Generator</a>, an application that generates a QR Code 
-                    from text. It uses <a href="https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction" target="_blank">Reed Solomon Error Correction</a> 
-                    for the case in which the qr code is damaged.
-                </li>
-
-                <li>
-                    <a href="https://github.com/21vidaloca/proiect_sd_sortari" target="_blank">Sorting Algorithms Comparator</a>, an application that compares sorting algorithms' 
-                    efficiency depending on different inputs.
-                </li>
-            </ul>
-
-
-        </p>
+      <h3>Highlighted Projects:</h3>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/petru-robu/Mandelbrot-visualizer"
+            target="_blank"
+            >Mandelbrot visualizer (Python)</a
+          >, a Mandelbrot set explorer that supports zooming, smooth coloring,
+          history, and color palettes. Youtube
+          <a href="https://www.youtube.com/watch?v=lsW5M9F5eOs" target="_blank"
+            >demo</a
+          >. <br /><em>Date: September, 2025</em>
+        </li>
+        <li>
+          <a href="https://github.com/petru-robu/GoGame" target="_blank"
+            >Go Game (C++/SFML)</a
+          >, implementation of the traditional Chinese game Go. This project is
+          cross-platform, using GitHub Actions and CI. Background music is my
+          own. For more details, read the README. <br /><em>Date: May, 2025</em>
+        </li>
+      </ul>
     </div>
 
-    <hr>
+    <div class="text-section">
+      <h3>Other Projects:</h3>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/petru-robu/signal-proc-fmi"
+            target="_blank"
+            >Signal processing</a
+          >
+          - signal processing experiments in Python for the signal processing
+          course at FMI, University of Bucharest.
+        </li>
+        <li>
+          <a
+            href="https://github.com/petru-robu/Genre-Classifier-Bayes"
+            target="_blank"
+            >Bayes Music Genre Classifier</a
+          >
+          - genre classifier based on Multinomial Naive Bayes.
+        </li>
+        <li>
+          <a href="https://github.com/petru-robu/SudokuSolver" target="_blank"
+            >Sudoku Solver</a
+          >
+          - input a sudoku and solve using backtracking.
+        </li>
+        <li>
+          <a href="https://github.com/petru-robu/Boids" target="_blank"
+            >Boids Simulator</a
+          >
+          - flocking simulator for animals like birds and fish.
+          <a href="https://en.wikipedia.org/wiki/Boids" target="_blank"
+            >Read more</a
+          >. Demo
+          <a
+            href="https://www.youtube.com/watch?v=A0u6Mn-_3jA&t"
+            target="_blank"
+            >here</a
+          >.
+        </li>
+        <li>
+          <a href="https://github.com/petru-robu/Snake" target="_blank"
+            >Snake Game</a
+          >
+          - simple snake game in Python. Demo
+          <a
+            href="https://www.youtube.com/watch?v=3bH3ytPieXU&t"
+            target="_blank"
+            >here</a
+          >.
+        </li>
+        <li>
+          <a href="https://github.com/petru-robu/RegexToDfa">Regex to DFA</a> -
+          regex to finite automata converter.
+        </li>
+        <li>
+          <a href="https://github.com/petru-robu/advent-of-code" target="_blank"
+            >Advent of Code</a
+          >
+          - solutions to challenges from 2024 onwards.
+        </li>
+      </ul>
+
+      <strong>Contributions / Team projects:</strong>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/flying-space-turtles/EmbiggenYourEyes"
+            target="_blank"
+            >NASA Space Apps hackathon project - Embiggen Your Eyes</a
+          >. Demo
+          <a href="https://www.youtube.com/watch?v=a7HkLiu2i9I">here</a>.
+        </li>
+        <li>
+          <a href="https://github.com/voaidesr/QR" target="_blank"
+            >QR Code Generator</a
+          >
+          - generates QR codes with Reed Solomon error correction.
+        </li>
+        <li>
+          <a
+            href="https://github.com/21vidaloca/proiect_sd_sortari"
+            target="_blank"
+            >Sorting Algorithms Comparator</a
+          >
+          - compares efficiency of sorting algorithms.
+        </li>
+        <li>
+          <a
+            href="https://github.com/petru-robu/Data-Structures-Benchmark"
+            target="_blank"
+            >Data Structures Benchmark</a
+          >
+          - analysis on Skip-Lists, Splay-Trees, and B-Trees.
+        </li>
+      </ul>
+
+      <strong>Interactive JavaScript Projects:</strong>
+      <ul>
+        <li><a href="mine_sweeper/index.html">Minesweeper</a></li>
+        <li><a href="game_of_life/index.html">Game of Life</a></li>
+      </ul>
+    </div>
 
     <div class="text-section">
-        <h3>Other:</h3>
-        <p>Some reviews on music and movies. <br>
-            <ul>
-                <li><a href="music-reviews/index.html">Music Reviews</a></li>
-                <li><a href="movie-reviews/index.html">Movies Reviews</a></li>
-            </ul>
-        </p>
-
+      <h3>Other:</h3>
+      <ul>
+        <li><a href="music-reviews/index.html">Music Reviews</a></li>
+        <li><a href="movie-reviews/index.html">Movie Reviews</a></li>
+        <li><a href="quotes/index.html">Orthodox wisdom</a></li>
+      </ul>
     </div>
-    
-</body>
 
-
+    <br />
+    <br />
+  </body>
 </html>
