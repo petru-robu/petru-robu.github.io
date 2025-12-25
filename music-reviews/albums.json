@@ -33,5 +33,29 @@
     "genre": "Progressive Rock",
     "year": 1973,
     "rating": 8.3
+  },
+
+  {
+    "album": "Acustic (Live@Unirii5)",
+    "artist": "Implant pentru refuz",
+    "genre": "Metal, alternative, progressive",
+    "year": 2016,
+    "rating": 9.3
+  },
+
+  {
+    "album": "Ispita",
+    "artist": "Celelalte Cuvinte",
+    "genre": "Metal, alternative",
+    "year": 1997,
+    "rating": 8.9
+  },
+
+  {
+    "album": "Armaghedon",
+    "artist": "Celelalte Cuvinte",
+    "genre": "Metal, thrash",
+    "year": 1994,
+    "rating": 8.8
   }
 ]
