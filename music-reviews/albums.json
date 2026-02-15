@@ -57,5 +57,13 @@
     "genre": "Metal, thrash",
     "year": 1994,
     "rating": 8.8
+  },
+
+  {
+    "album": "La frumusetea ei",
+    "artist": "ABRA",
+    "genre": "Folk, Rock, Classical",
+    "year": 2016,
+    "rating": 9.4
   }
 ]

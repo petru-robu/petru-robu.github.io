@@ -1,196 +1,130 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="./global_styles.css" />
-    <title>Homepage</title>
-  </head>
 
-  <body>
-    <div class="title">
-      <h1>Petru Razvan Robu</h1>
-      <p id="creation-date"></p>
-      <p id="date"></p>
-    </div>
+<head>
+  <link rel="stylesheet" href="./global_styles.css" />
+  <title>Homepage</title>
+</head>
 
-    <div class="text-section">
-      <div class="intro-wrapper">
-        <div class="intro">
-          <h3>Welcome!</h3>
-          <p>
-            This is my personal website. On this website you will find some of
-            my programming projects and occasional articles on different topics.
-          </p>
+<body>
+  <div class="title">
+    <h1>Petru Razvan Robu</h1>
+    <p id="creation-date"></p>
+    <p id="date"></p>
+  </div>
 
-          <p>
-            I am a CS at University of Bucharest.
-          </p>
-          <p>
-            Feel free to contact me at the following details, if you wish to get
-            in touch:
-            <a href="mailto:petru.robu@hotmail.com">petru.robu@hotmail.com</a>.
-          </p>
-          <p>
-            You can also find me on
-            <a target="_blank" href="https://www.youtube.com/@petru-robu64"
-              >YouTube</a
-            >
-            and on
-            <a target="_blank" href="https://github.com/petru-robu">GitHub</a>.
-          </p>
-        </div>
+  <div class="text-section">
+    <div class="intro-wrapper">
+      <div class="intro">
+        <h3>Welcome!</h3>
+        <p>
+          This is my personal website. On this website you will find some of
+          my programming projects and occasional articles on different topics.
+        </p>
 
-        <!-- <img id="season-image" width="200" height="200" /> -->
+        <p>
+          I am a CS student at University of Bucharest.
+        </p>
+        <p>
+          Feel free to contact me at the following details, if you wish to get
+          in touch:
+          <a href="mailto:petru.robu@hotmail.com">petru.robu@hotmail.com</a>.
+        </p>
+        <p>
+          You can also find me on
+          <a target="_blank" href="https://www.youtube.com/@petru-robu64">YouTube</a>
+          and
+          <a target="_blank" href="https://github.com/petru-robu">GitHub</a>.
+        </p>
       </div>
+
+      <!-- <img id="season-image" width="200" height="200" /> -->
     </div>
+  </div>
 
-    <script>
-      const month = new Date().getMonth() + 1; // 1–12
-      const isWinter = month === 12 || month <= 2;
-      const imageSrc = isWinter ? "me-winter.png" : "me-summer.png";
-      document.getElementById("season-image").src = imageSrc;
+  <script>
+    const month = new Date().getMonth() + 1; // 1–12
+    const isWinter = month === 12 || month <= 2;
+    const imageSrc = isWinter ? "me-winter.png" : "me-summer.png";
+    document.getElementById("season-image").src = imageSrc;
 
-      const creation_date = new Date("2024-11-05");
-      const today = new Date();
-      const diffInMs = today - creation_date;
-      const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
+    const creation_date = new Date("2024-11-05");
+    const today = new Date();
+    const diffInMs = today - creation_date;
+    const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
 
-      document.getElementById("date").textContent =
-        "There have been " + diffInDays + " days since site creation.";
-    </script>
+    document.getElementById("date").textContent =
+      "There have been " + diffInDays + " days since site creation.";
+  </script>
 
-    <div class="text-section">
-      <h3>Projects:</h3>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/petru-robu/Mandelbrot-visualizer"
-            target="_blank"
-            >Mandelbrot visualizer (Python)</a
-          >, a Mandelbrot set explorer that supports zooming, smooth coloring,
-          history, and color palettes. Youtube
-          <a href="https://www.youtube.com/watch?v=lsW5M9F5eOs" target="_blank"
-            >demo</a
-          >. <br />
-          <span style="color: rgb(198, 148, 255)">September, 2025</span>
-        </li>
-        <li>
-          <a href="https://github.com/petru-robu/GoGame" target="_blank"
-            >Go Game (C++/SFML)</a
-          >, implementation of the traditional Chinese game Go. This project is
-          cross-platform, using GitHub Actions and CI. Background music is my
-          own. For more details, read the README. <br />
+  <div class="text-section">
+    <h3>Latest Projects:</h3>
+    <ul>
+      <li>
+        <a href="https://github.com/voaidesr/non-local-means-denoising" target="_blank">NLM Image Denoising</a>,
+        different Implementations of the Non-Local Means Denoising Algorithm, including Montecarlo, KD-Trees and Hashed
+        NLM.
+      </li>
+      <li>
+        <a href="https://github.com/petru-robu/Mandelbrot-visualizer" target="_blank">Mandelbrot visualizer</a>, a Mandelbrot set explorer that supports zooming, smooth coloring,
+        history, and color palettes. <br />
+      </li>
+      <li>
+        <a href="https://github.com/petru-robu/GoGame" target="_blank">Go Game</a>, implementation of the
+        traditional Chinese game Go. Background music is made by me.
+      </li>
+    </ul>
+  </div>
 
-          <span style="color: rgb(198, 148, 255)">May, 2025</span>
-        </li>
-        <li>
-          <a href="https://github.com/petru-robu/Boids" target="_blank"
-            >Boids Simulator (C++/SFML)</a
-          >
-          - flocking simulator for animals like birds and fish, the way they
-          behave in a flock. Demo
-          <a
-            href="https://www.youtube.com/watch?v=A0u6Mn-_3jA&t"
-            target="_blank"
-            >here</a
-          >.
-          <br />
-          <span style="color: rgb(198, 148, 255)">September, 2024</span>
-        </li>
-      </ul>
-    </div>
+  <div class="text-section">
+    <h3>Hackathons / Events:</h3>
 
-    <div class="text-section">
-      <h3>Hackathons:</h3>
+    <ul>
+      <li>
+        <span style="color: rgb(255, 255, 98)">Awarded 2nd place</span> at
+        <strong>HackITall</strong> hackathon in Bucharest at sponsor SAP with team MergeMe.
+        Here is our
+        <a href="https://github.com/voaidesr/MergeMe" target="_blank">project</a>.
+        <br />
+        <span style="color: rgb(198, 148, 255)">December, 2025</span>
+      </li>
 
-      <ul>
-        <li>
-          <span style="color: rgb(255, 255, 98)">Awarded 2nd place</span> at
-          <strong>HackITall</strong> hackathon in Bucharest at sponsor SAP with team MergeMe.
-          Here is our
-          <a href="https://github.com/voaidesr/MergeMe" target="_blank"
-            >project</a
-          >.
-          <br />
-          <span style="color: rgb(198, 148, 255)">December, 2025</span>
-        </li>
+      <li>
+        Participated at <strong>NASA Space Apps Challenge</strong> hackathon in Bucharest with
+        team Flying Space Turtles. Here is our
+        <a href="https://github.com/flying-space-turtles/EmbiggenYourEyes" target="_blank">project</a>
+        and also a
+        <a href="https://www.youtube.com/watch?v=a7HkLiu2i9I" target="_blank">demo</a>.
+        <br />
+        <span style="color: rgb(198, 148, 255)">October, 2025</span>
+      </li>
+    </ul>
+  </div>
 
-        <li>
-          Participated at <strong>NASA Space Apps Challenge</strong> hackathon in Bucharest with
-          team Flying Space Turtles. Here is our
-          <a
-            href="https://github.com/flying-space-turtles/EmbiggenYourEyes"
-            target="_blank"
-            >project</a
-          >
-          and also a
-          <a href="https://www.youtube.com/watch?v=a7HkLiu2i9I" target="_blank"
-            >demo</a
-          >.
-          <br />
-          <span style="color: rgb(198, 148, 255)">October, 2025</span>
-        </li>
-      </ul>
-    </div>
+  <div class="text-section">
+    <h3>Other Stuff:</h3>
+    <ul>
+      <li>
+        <a href="https://github.com/petru-robu/signal-proc-fmi" target="_blank">Signal processing</a>
+      </li>
+      <li><a href="mine_sweeper/index.html">Minesweeper (interactive)</a></li>
 
-    <div class="text-section">
-      <h3>Other Stuff:</h3>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/petru-robu/signal-proc-fmi"
-            target="_blank"
-            >Signal processing</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/petru-robu/Genre-Classifier-Bayes"
-            target="_blank"
-            >Bayes Music Genre Classifier</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/voaidesr/QR" target="_blank"
-            >QR Code Generator</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/petru-robu/Data-Structures-Benchmark"
-            target="_blank"
-            >Data Structures Benchmark</a
-          >
-        </li>
+      <li>
+        <a href="game_of_life/index.html">Game of Life (interactive)</a>
+      </li>
+    </ul>
+  </div>
 
-        <li>
-          <a href="https://github.com/petru-robu/advent-of-code" target="_blank"
-            >Advent of Code</a
-          >
-        </li>
-        <li><a href="mine_sweeper/index.html">Minesweeper (interactive)</a></li>
+  <div class="text-section">
+    <h3>Reviews:</h3>
+    <ul>
+      <li><a href="music-reviews/index.html">Music Reviews</a></li>
+      <li><a href="movie-reviews/index.html">Movie Reviews</a></li>
+    </ul>
+  </div>
 
-        <li>
-          <a href="game_of_life/index.html">Game of Life (interactive)</a>
-        </li>
-      </ul>
-    </div>
+  <br />
+  <br />
+</body>
 
-    <div class="text-section">
-      <h3>Other:</h3>
-      <ul>
-        <li><a href="music-reviews/index.html">Music Reviews</a></li>
-        <li><a href="movie-reviews/index.html">Movie Reviews</a></li>
-      </ul>
-
-      <!-- <h3>Hiking:</h3>
-      <ul>
-        <li>Reached <span style="color: rgb(255, 255, 98)">"Moldoveanu"</span> peak (Fagaras, Romania).</li>
-        <li>Reached <span style="color: rgb(255, 255, 98)">"La om", "Ascutit"</span> peaks (Piatra Craiului, Romania).</li>
-        <li>Reached <span style="color: rgb(255, 255, 98)">"Omu", "Bucsoiu", "Batrana"</span> peaks (Bucegi, Romania).</li>
-      </ul> -->
-    </div>
-
-    <br />
-    <br />
-  </body>
 </html>
